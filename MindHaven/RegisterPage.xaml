@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindHaven.RegisterPage">
+
+    <StackLayout Padding="10">
+        <Entry x:Name="firstNameEntry" Placeholder="First Name" />
+        <Entry x:Name="lastNameEntry" Placeholder="Last Name" />
+        <Entry x:Name="birthdayEntry" Placeholder="Birthday" />
+        <Entry x:Name="usernameEntry" Placeholder="Username" />
+        <Entry x:Name="emailEntry" Placeholder="Email" />
+        <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" />
+        <Button Text="Register" Clicked="OnRegisterButtonClicked" />
+    </StackLayout>
+
+</ContentPage>
