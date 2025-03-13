@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\angel\\source\\repos\\MindHaven\\",
+  "WorkspaceRootPath": "C:\\MindHaven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\users\\angel\\source\\repos\\mindhaven\\mindhaven\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -48,24 +48,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "MindHaven\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\LoginPage.xaml.cs",
               "RelativeToolTip": "MindHaven\\LoginPage.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCEAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCEAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T22:10:50.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T22:10:50.546Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RegisterPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\RegisterPage.xaml.cs",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\RegisterPage.xaml.cs",
               "RelativeDocumentMoniker": "MindHaven\\RegisterPage.xaml.cs",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\RegisterPage.xaml.cs",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\RegisterPage.xaml.cs",
               "RelativeToolTip": "MindHaven\\RegisterPage.xaml.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAQwC0AAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAEwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T21:45:40.528Z",
               "EditorCaption": ""
@@ -74,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\App.xaml",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\App.xaml",
               "RelativeDocumentMoniker": "MindHaven\\App.xaml",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\App.xaml",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\App.xaml",
               "RelativeToolTip": "MindHaven\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -86,9 +85,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\AppShell.xaml",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\AppShell.xaml",
               "RelativeDocumentMoniker": "MindHaven\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\AppShell.xaml",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\AppShell.xaml",
               "RelativeToolTip": "MindHaven\\AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -98,9 +97,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MindHaven\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\MainPage.xaml.cs",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\MainPage.xaml.cs",
               "RelativeToolTip": "MindHaven\\MainPage.xaml.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -110,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\MainPage.xaml",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\MainPage.xaml",
               "RelativeDocumentMoniker": "MindHaven\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\MainPage.xaml",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\MainPage.xaml",
               "RelativeToolTip": "MindHaven\\MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -122,9 +121,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\LoginPage.xaml",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\LoginPage.xaml",
               "RelativeDocumentMoniker": "MindHaven\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\LoginPage.xaml",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\LoginPage.xaml",
               "RelativeToolTip": "MindHaven\\LoginPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -134,9 +133,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\MauiProgram.cs",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MindHaven\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\angel\\source\\repos\\MindHaven\\MindHaven\\MauiProgram.cs",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\MauiProgram.cs",
               "RelativeToolTip": "MindHaven\\MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
