@@ -1,15 +1,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MindHaven.LoginPage"
-             Title="Login">
+             Title="Login"
+             BackgroundColor="{StaticResource BackgroundDark}">
 
-    <VerticalStackLayout Padding="30" Spacing="15" BackgroundColor="LightBlue">
-        <Label Text="Login" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
 
-        <Entry x:Name="emailEntry" Placeholder="Email" Keyboard="Email"/>
-        <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"/>
+        <!-- Logo at the top with spacing -->
+        <Image Source="logo.png" 
+               HeightRequest="120" 
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20"/>
+        <!-- Medium space below the logo -->
 
-        <Button Text="Login" Clicked="OnLoginClicked" BackgroundColor="Blue" TextColor="White"/>
-        <Button Text="Create an Account" Clicked="OnRegisterClicked" BackgroundColor="Transparent" TextColor="Blue"/>
+       
+
+        <Entry x:Name="emailEntry" Placeholder="Email" Keyboard="Email"
+               TextColor="{StaticResource TextColorLight}" BackgroundColor="{StaticResource BackgroundDark}"/>
+        <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"
+               TextColor="{StaticResource TextColorLight}" BackgroundColor="{StaticResource BackgroundDark}"/>
+
+        <Button Text="Login" Clicked="OnLoginClicked" BackgroundColor="{StaticResource PrimaryColor}" TextColor="White"/>
+        <Button Text="Create an Account" Clicked="OnRegisterClicked" BackgroundColor="Transparent" TextColor="{StaticResource PrimaryColor}"/>
     </VerticalStackLayout>
 </ContentPage>

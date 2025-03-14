@@ -620,3 +620,4 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\refint\MindHaven.dl
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\MindHaven.pdb
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\MindHaven.genruntimeconfig.cache
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\ref\MindHaven.dll
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\logo.png

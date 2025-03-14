@@ -40,7 +40,7 @@ namespace MindHaven
                     if (responseData.Contains("success"))
                     {
                         await DisplayAlert("Success", "Login successful!", "OK");
-                        await Navigation.PushAsync(new MindHaven.MainPage()); // Redirect to MainPage
+                        await Navigation.PushAsync(new MindHaven.MainMenuPage()); // Redirect to MainPage
                     }
                     else
                     {

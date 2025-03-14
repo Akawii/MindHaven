@@ -4,11 +4,11 @@
              xmlns:local="clr-namespace:MindHaven"
              x:Class="MindHaven.App">
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <Color x:Key="PrimaryColor">#4A90E2</Color>
+        <!-- Light Blue Shade -->
+        <Color x:Key="BackgroundDark">#181818</Color>
+        <!-- Dark Background -->
+        <Color x:Key="TextColorLight">#FFFFFF</Color>
+        <!-- White Text -->
     </Application.Resources>
 </Application>

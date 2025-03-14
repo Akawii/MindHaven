@@ -8,5 +8,7 @@
     <ShellContent Title="Login" ContentTemplate="{DataTemplate local:LoginPage}" Route="LoginPage"/>
     <ShellContent Title="Register" ContentTemplate="{DataTemplate local:RegisterPage}" Route="RegisterPage"/>
     <ShellContent Title="Main" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+    <ShellContent Title="MainMenuPage" ContentTemplate="{DataTemplate local:MainMenuPage}" Route="MainMenuPage"/>
+    <ShellContent Title="EmotionalDiaryPage" ContentTemplate="{DataTemplate local:EmotionalDiaryPage}" Route="EmotionalDiaryPage"/>
 
 </Shell>

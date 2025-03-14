@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MindHaven")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+2c46c5020dca8825559d30ad8c1eb8e103908f4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8fe5f7edb1dd76ba690f08dcaeb68a054fe6df48")]
 [assembly: System.Reflection.AssemblyProductAttribute("MindHaven")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MindHaven")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

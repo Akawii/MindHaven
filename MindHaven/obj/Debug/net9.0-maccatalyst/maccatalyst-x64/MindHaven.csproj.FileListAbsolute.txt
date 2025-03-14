@@ -596,3 +596,4 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\refint\MindH
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MindHaven.pdb
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MindHaven.genruntimeconfig.cache
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\MindHaven.dll
+C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo.png
