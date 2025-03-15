@@ -60,6 +60,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MindHaven.RegisterPage.xam
 build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
 
+[C:/MindHaven/MindHaven/ReportsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MindHaven.ReportsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ReportsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ReportsPage.xaml
+
 [C:/MindHaven/MindHaven/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MindHaven.Resources.Styles.Colors.xaml

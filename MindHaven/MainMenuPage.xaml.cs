@@ -1,4 +1,5 @@
 using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace MindHaven
 {
@@ -8,9 +9,18 @@ namespace MindHaven
         {
             InitializeComponent();
         }
+
         private async void OnEmotionalDiaryClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MindHaven.EmotionalDiaryPage());
+            Application.Current.MainPage = new EmotionalDiaryPage();
         }
+
+        private async void OnReportsPageClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new ReportsPage();
+        }
+
+        
     }
+
 }

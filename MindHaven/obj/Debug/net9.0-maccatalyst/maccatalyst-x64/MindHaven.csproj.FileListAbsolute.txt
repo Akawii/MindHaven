@@ -550,6 +550,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.in
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -596,4 +597,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\refint\MindH
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MindHaven.pdb
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MindHaven.genruntimeconfig.cache
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\MindHaven.dll
-C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo.png
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Licensing.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Maui.Charts.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Maui.Core.dll
+C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiMaterialAssets.ttf

@@ -15,6 +15,12 @@
                         Clicked="OnEmotionalDiaryClicked"
                         BackgroundColor="{StaticResource PrimaryColor}"
                         TextColor="White"/>
+
+                <Button Text="Reports"
+                        Clicked="OnReportsPageClicked"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="White"/>
+
             </VerticalStackLayout>
         </ContentPage>
     </FlyoutPage.Flyout>

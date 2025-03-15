@@ -563,7 +563,6 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet-n
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.inputs
@@ -573,6 +572,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\spla
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.stamp
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\logo.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -620,4 +620,8 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\refint\MindHaven.dl
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\MindHaven.pdb
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\MindHaven.genruntimeconfig.cache
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\ref\MindHaven.dll
-C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\logo.png
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Licensing.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Charts.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Core.dll
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiMaterialAssets.ttf

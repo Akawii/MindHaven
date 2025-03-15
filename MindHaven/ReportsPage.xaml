@@ -1,0 +1,49 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             x:Class="MindHaven.ReportsPage"
+             Title="Emotion Reports">
+
+    <syncfusion:SfCartesianChart>
+
+        <!-- X Axis -->
+        <syncfusion:SfCartesianChart.XAxes>
+            <syncfusion:CategoryAxis>
+                <syncfusion:CategoryAxis.Title>
+                    <syncfusion:ChartAxisTitle Text="Date" />
+                </syncfusion:CategoryAxis.Title>
+            </syncfusion:CategoryAxis>
+        </syncfusion:SfCartesianChart.XAxes>
+
+        <!-- Y Axis -->
+        <syncfusion:SfCartesianChart.YAxes>
+            <syncfusion:NumericalAxis Minimum="0" Maximum="10" Interval="1">
+                <syncfusion:NumericalAxis.Title>
+                    <syncfusion:ChartAxisTitle Text="Emotion Intensity" />
+                </syncfusion:NumericalAxis.Title>
+            </syncfusion:NumericalAxis>
+        </syncfusion:SfCartesianChart.YAxes>
+
+        <!-- Line Series -->
+        <syncfusion:LineSeries ItemsSource="{Binding EmotionData}" 
+                               XBindingPath="Date" 
+                               YBindingPath="Intensity"
+                               Label="Emotions"
+                               ShowDataLabels="True"
+                               ShowMarkers="True">
+            <!-- Customize Marker Appearance -->
+            <syncfusion:LineSeries.MarkerSettings>
+                <syncfusion:ChartMarkerSettings Width="10" 
+                                                Height="10" 
+                                                Type="Circle"/>
+            </syncfusion:LineSeries.MarkerSettings>
+
+            <!-- Customize Data Label Appearance -->
+            <syncfusion:LineSeries.DataLabelSettings>
+                <syncfusion:CartesianDataLabelSettings />
+            </syncfusion:LineSeries.DataLabelSettings>
+        </syncfusion:LineSeries>
+
+    </syncfusion:SfCartesianChart>
+
+</ContentPage>
