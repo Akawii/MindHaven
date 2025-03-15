@@ -601,3 +601,5 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.L
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Maui.Charts.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Maui.Core.dll
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiMaterialAssets.ttf
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.Core.dll

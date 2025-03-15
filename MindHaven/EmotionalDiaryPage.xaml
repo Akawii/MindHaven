@@ -32,9 +32,13 @@
                         <!-- Auto-filled Date -->
                         <Label x:Name="dateLabel" FontSize="18" TextColor="{StaticResource TextColorLight}"/>
 
-                        <!-- Emotion Entry -->
-                        <Entry x:Name="emotionEntry" Placeholder="Emotion (e.g., Happy, Sad, Anxious)"
-                               TextColor="{StaticResource TextColorLight}" BackgroundColor="{StaticResource BackgroundDark}"/>
+                        <!-- Emotion Selection Buttons -->
+                        <HorizontalStackLayout x:Name="emotionButtons" Spacing="10">
+                            <Button Text="Happy" Clicked="OnEmotionSelected" StyleId="Happy"/>
+                            <Button Text="Neutral" Clicked="OnEmotionSelected" StyleId="Neutral"/>
+                            <Button Text="Sad" Clicked="OnEmotionSelected" StyleId="Sad"/>
+                            <Button Text="Angry" Clicked="OnEmotionSelected" StyleId="Angry"/>
+                        </HorizontalStackLayout>
 
                         <!-- Note Entry -->
                         <Editor x:Name="noteEditor" Placeholder="Write your thoughts..." 

@@ -6,12 +6,14 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Storage;
+using Syncfusion.Maui.Charts;
 
 namespace MindHaven
 {
-    public partial class ReportsPage : ContentPage
+    public partial class ReportsPage : FlyoutPage
     {
         public ObservableCollection<EmotionEntry> EmotionData { get; set; } = new();
+        public ObservableCollection<NoteEntry> NotesData { get; set; } = new();
         private static readonly HttpClient client = new();
 
         public ReportsPage()
@@ -19,6 +21,12 @@ namespace MindHaven
             InitializeComponent();
             BindingContext = this;
             LoadEmotionData();
+            LoadNotesData();
+        }
+
+        private async void OnMainMenuClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new MainMenuPage();
         }
 
         private async void LoadEmotionData()
@@ -33,10 +41,8 @@ namespace MindHaven
             try
             {
                 var requestData = new { user_id = userId };
-                var response = await client.PostAsJsonAsync("http://localhost/mindhaven/reports.php", requestData); // Replace with your server's IP
-
+                var response = await client.PostAsJsonAsync("http://localhost/mindhaven/reports.php", requestData);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(jsonResponse); // Debugging output
 
                 if (!response.IsSuccessStatusCode)
                 {
@@ -44,29 +50,21 @@ namespace MindHaven
                     return;
                 }
 
-                // Handle potential error message in the JSON
-                if (jsonResponse.Contains("error"))
-                {
-                    await DisplayAlert("Error", jsonResponse, "OK");
-                    return;
-                }
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var emotions = JsonSerializer.Deserialize<List<EmotionEntry>>(jsonResponse, options);
 
-                var emotions = JsonSerializer.Deserialize<List<EmotionEntry>>(jsonResponse);
-                if (emotions == null || emotions.Count == 0)
+                if (emotions != null)
                 {
-                    await DisplayAlert("Info", "No emotion data found.", "OK");
-                    return;
-                }
-
-                EmotionData.Clear();
-                foreach (var emotion in emotions)
-                {
-                    EmotionData.Add(new EmotionEntry
+                    EmotionData.Clear();
+                    foreach (var emotion in emotions)
                     {
-                        Date = emotion.Date,
-                        Emotion = emotion.Emotion,
-                        Intensity = MapEmotionToIntensity(emotion.Emotion)
-                    });
+                        EmotionData.Add(new EmotionEntry
+                        {
+                            Date = emotion.Date,
+                            Emotion = emotion.Emotion,
+                            Intensity = MapEmotionToIntensity(emotion.Emotion)
+                        });
+                    }
                 }
             }
             catch (Exception ex)
@@ -77,26 +75,89 @@ namespace MindHaven
 
         private int MapEmotionToIntensity(string emotion)
         {
-            if (string.IsNullOrEmpty(emotion))
+            return emotion switch
             {
-                return 3; // Default intensity if emotion is null or empty
-            }
-
-            return emotion.ToLower() switch
-            {
-                "Happy" => 10,
-                "Neutral" => 5,
-                "Sad" => 1,
-                _ => 3
+                "Excited" => 10,
+                "Happy" => 8,
+                "Neutral" => 6,
+                "Sad" => 4,
+                "Angry" => 2,
+                _ => 0
             };
         }
 
-    }
+        private void OnYAxisLabelCreated(object sender, ChartAxisLabelEventArgs e)
+        {
+            if (double.TryParse(e.Label.ToString(), out double intensityValue))
+            {
+                e.Label = GetEmotionFromIntensity((int)intensityValue);
+            }
+        }
 
-    public class EmotionEntry
-    {
-        public string Date { get; set; }
-        public string Emotion { get; set; }
-        public int Intensity { get; set; }
+        private string GetEmotionFromIntensity(int intensity)
+        {
+            return intensity switch
+            {
+                10 => "Excited",
+                8 => "Happy",
+                6 => "Neutral",
+                4 => "Sad",
+                2 => "Angry",
+                _ => "None"
+            };
+        }
+
+        private async void LoadNotesData()
+        {
+            int userId = Preferences.Get("UserId", 0);
+            if (userId == 0)
+            {
+                await DisplayAlert("Error", "User not logged in.", "OK");
+                return;
+            }
+
+            try
+            {
+                var requestData = new { user_id = userId };
+                var response = await client.PostAsJsonAsync("http://localhost/mindhaven/get_notes.php", requestData);
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    await DisplayAlert("Error", $"Server error: {jsonResponse}", "OK");
+                    return;
+                }
+
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var notes = JsonSerializer.Deserialize<List<NoteEntry>>(jsonResponse, options);
+
+                if (notes != null)
+                {
+                    NotesData.Clear();
+                    foreach (var note in notes)
+                    {
+                        Console.WriteLine($"Loaded Note: {note.Date} - {note.Content}"); // Debugging line
+                        NotesData.Add(note);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Failed to load notes: {ex.Message}", "OK");
+            }
+        }
+
+        public class EmotionEntry
+        {
+            public string Date { get; set; }
+            public string Emotion { get; set; }
+            public int Intensity { get; set; }
+        }
+
+        public class NoteEntry
+        {
+            public string Date { get; set; }
+            public string Content { get; set; }
+        }
     }
 }

@@ -3,32 +3,48 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Microsoft.Maui.Storage; // Needed for Preferences
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Controls;
 
 namespace MindHaven
 {
     public partial class EmotionalDiaryPage : FlyoutPage
     {
         private static readonly HttpClient client = new HttpClient(new HttpClientHandler());
+        private string selectedEmotion;
 
         public EmotionalDiaryPage()
         {
             InitializeComponent();
-            dateLabel.Text = DateTime.Now.ToString("yyyy-MM-dd"); // Auto-fill date
+            dateLabel.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        }
+
+        private void OnEmotionSelected(object sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                selectedEmotion = button.StyleId;
+
+                foreach (var child in emotionButtons.Children)
+                {
+                    if (child is Button btn)
+                    {
+                        btn.Opacity = btn.StyleId == selectedEmotion ? 1 : 0.5;
+                        btn.Scale = btn.StyleId == selectedEmotion ? 1.1 : 1;
+                    }
+                }
+            }
         }
 
         private async void OnSaveClicked(object sender, EventArgs e)
         {
-            string emotion = emotionEntry.Text;
             string note = noteEditor.Text;
             string date = dateLabel.Text;
-
-            // Get stored User ID from login
             int userId = Preferences.Get("UserId", 0);
 
-            if (string.IsNullOrWhiteSpace(emotion) || string.IsNullOrWhiteSpace(note))
+            if (string.IsNullOrWhiteSpace(selectedEmotion) || string.IsNullOrWhiteSpace(note))
             {
-                await DisplayAlert("Error", "Please fill in all fields.", "OK");
+                await DisplayAlert("Error", "Please select an emotion and write a note.", "OK");
                 return;
             }
 
@@ -41,7 +57,7 @@ namespace MindHaven
             var emotionData = new
             {
                 user_id = userId,
-                emotion,
+                emotion = selectedEmotion,
                 note,
                 date
             };
@@ -59,10 +75,16 @@ namespace MindHaven
                 if (jsonResponse != null && jsonResponse.status == "success")
                 {
                     await DisplayAlert("Success", "Your emotion has been recorded!", "OK");
-                    
-                    emotionEntry.Text = string.Empty;
                     noteEditor.Text = string.Empty;
-                    
+                    selectedEmotion = null;
+                    foreach (var child in emotionButtons.Children)
+                    {
+                        if (child is Button btn)
+                        {
+                            btn.Opacity = 1;
+                            btn.Scale = 1;
+                        }
+                    }
                 }
                 else
                 {

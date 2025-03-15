@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.Core.Hosting; // Add this!
+using Syncfusion.Maui.Core.Hosting; // Syncfusion Registration
+using CommunityToolkit.Maui; // CommunityToolkit Registration
 
 namespace MindHaven
 {
@@ -11,7 +12,8 @@ namespace MindHaven
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .ConfigureSyncfusionCore() // Register Syncfusion handlers here
+                .ConfigureSyncfusionCore() // Register Syncfusion handlers
+                .UseMauiCommunityToolkit() // Register CommunityToolkit
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

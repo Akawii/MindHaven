@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LUUegEzVAMg=",
+  "dgSpecHash": "mUOWNXx1Tm4=",
   "success": true,
   "projectFilePath": "C:\\MindHaven\\MindHaven\\MindHaven.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ângela Xavier\\.nuget\\packages\\communitytoolkit.maui\\11.1.0\\communitytoolkit.maui.11.1.0.nupkg.sha512",
+    "C:\\Users\\Ângela Xavier\\.nuget\\packages\\communitytoolkit.maui.core\\11.1.0\\communitytoolkit.maui.core.11.1.0.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\googlegson\\2.11.0.5\\googlegson.2.11.0.5.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.0\\microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
@@ -33,6 +35,7 @@
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\syncfusion.licensing\\28.2.11\\syncfusion.licensing.28.2.11.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\syncfusion.maui.charts\\28.2.11\\syncfusion.maui.charts.28.2.11.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\syncfusion.maui.core\\28.2.11\\syncfusion.maui.core.28.2.11.nupkg.sha512",
+    "C:\\Users\\Ângela Xavier\\.nuget\\packages\\system.speech\\9.0.0\\system.speech.9.0.0.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Ângela Xavier\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.11\\xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",

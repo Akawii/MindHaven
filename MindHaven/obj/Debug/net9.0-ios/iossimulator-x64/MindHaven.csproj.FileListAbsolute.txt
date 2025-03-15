@@ -625,3 +625,5 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Cha
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Core.dll
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiMaterialAssets.ttf
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll

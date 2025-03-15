@@ -1,49 +1,103 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             x:Class="MindHaven.ReportsPage"
-             Title="Emotion Reports">
+﻿<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+            xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+            x:Class="MindHaven.ReportsPage">
 
-    <syncfusion:SfCartesianChart>
+    <!-- Side Menu -->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu" BackgroundColor="{StaticResource BackgroundDark}">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Menu" FontSize="24" FontAttributes="Bold"
+                       TextColor="{StaticResource TextColorLight}" HorizontalOptions="Center"/>
+                <Button Text="Back to Main Menu"
+                        Clicked="OnMainMenuClicked"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="White"/>
+            </VerticalStackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
 
-        <!-- X Axis -->
-        <syncfusion:SfCartesianChart.XAxes>
-            <syncfusion:CategoryAxis>
-                <syncfusion:CategoryAxis.Title>
-                    <syncfusion:ChartAxisTitle Text="Date" />
-                </syncfusion:CategoryAxis.Title>
-            </syncfusion:CategoryAxis>
-        </syncfusion:SfCartesianChart.XAxes>
+    <!-- Main Content -->
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="Reports" BackgroundColor="{StaticResource BackgroundDark}">
+                    <ScrollView>
+                        <VerticalStackLayout Padding="10" Spacing="15">
 
-        <!-- Y Axis -->
-        <syncfusion:SfCartesianChart.YAxes>
-            <syncfusion:NumericalAxis Minimum="0" Maximum="10" Interval="1">
-                <syncfusion:NumericalAxis.Title>
-                    <syncfusion:ChartAxisTitle Text="Emotion Intensity" />
-                </syncfusion:NumericalAxis.Title>
-            </syncfusion:NumericalAxis>
-        </syncfusion:SfCartesianChart.YAxes>
+                            <!-- Emotion Data Section -->
+                            <Label Text="Emotion Data"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource PrimaryColor}"
+                                   Padding="10"/>
 
-        <!-- Line Series -->
-        <syncfusion:LineSeries ItemsSource="{Binding EmotionData}" 
-                               XBindingPath="Date" 
-                               YBindingPath="Intensity"
-                               Label="Emotions"
-                               ShowDataLabels="True"
-                               ShowMarkers="True">
-            <!-- Customize Marker Appearance -->
-            <syncfusion:LineSeries.MarkerSettings>
-                <syncfusion:ChartMarkerSettings Width="10" 
-                                                Height="10" 
-                                                Type="Circle"/>
-            </syncfusion:LineSeries.MarkerSettings>
+                            <syncfusion:SfCartesianChart>
+                                <syncfusion:SfCartesianChart.XAxes>
+                                    <syncfusion:CategoryAxis>
+                                        <syncfusion:CategoryAxis.Title>
+                                            <syncfusion:ChartAxisTitle Text="Date" />
+                                        </syncfusion:CategoryAxis.Title>
+                                    </syncfusion:CategoryAxis>
+                                </syncfusion:SfCartesianChart.XAxes>
 
-            <!-- Customize Data Label Appearance -->
-            <syncfusion:LineSeries.DataLabelSettings>
-                <syncfusion:CartesianDataLabelSettings />
-            </syncfusion:LineSeries.DataLabelSettings>
-        </syncfusion:LineSeries>
+                                <syncfusion:SfCartesianChart.YAxes>
+                                    <syncfusion:NumericalAxis Minimum="0" Maximum="10" Interval="2">
+                                        <syncfusion:NumericalAxis.Title>
+                                            <syncfusion:ChartAxisTitle Text="Emotions" />
+                                        </syncfusion:NumericalAxis.Title>
+                                    </syncfusion:NumericalAxis>
+                                </syncfusion:SfCartesianChart.YAxes>
 
-    </syncfusion:SfCartesianChart>
+                                <syncfusion:LineSeries ItemsSource="{Binding EmotionData}" 
+                                                       XBindingPath="Date" 
+                                                       YBindingPath="Intensity"
+                                                       ShowMarkers="True">
+                                    <syncfusion:LineSeries.MarkerSettings>
+                                        <syncfusion:ChartMarkerSettings Width="10" Height="10" Type="Circle"/>
+                                    </syncfusion:LineSeries.MarkerSettings>
+                                </syncfusion:LineSeries>
+                            </syncfusion:SfCartesianChart>
 
-</ContentPage>
+                            <!-- Recorded Notes Section -->
+                            <Label Text="Recorded Notes" 
+                                   FontSize="20" 
+                                   FontAttributes="Bold" 
+                                   TextColor="{StaticResource PrimaryColor}" 
+                                   Padding="10"/>
+
+                            <CollectionView ItemsSource="{Binding NotesData}" SelectionMode="None">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <toolkit:Expander>
+                                            <toolkit:Expander.Header>
+                                                <Button Text="{Binding Date}" 
+                                                        FontSize="16" 
+                                                        FontAttributes="Bold"
+                                                        BackgroundColor="{StaticResource PrimaryColor}" 
+                                                        TextColor="White"/>
+                                            </toolkit:Expander.Header>
+                                            <toolkit:Expander.Content>
+                                                <Frame Padding="10" 
+                                                       CornerRadius="10" 
+                                                       Margin="5" 
+                                                       BackgroundColor="{StaticResource BackgroundLight}">
+                                                    <Label Text="{Binding Content}" 
+                                                           FontSize="14" 
+                                                           TextColor="{StaticResource TextColorLight}" />
+                                                </Frame>
+                                            </toolkit:Expander.Content>
+                                        </toolkit:Expander>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>
