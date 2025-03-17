@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Storage;
 using Syncfusion.Maui.Charts;
+using System.Text.Json.Serialization;
 
 namespace MindHaven
 {
@@ -44,12 +45,6 @@ namespace MindHaven
                 var response = await client.PostAsJsonAsync("http://localhost/mindhaven/reports.php", requestData);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
 
-                if (!response.IsSuccessStatusCode)
-                {
-                    await DisplayAlert("Error", $"Server error: {jsonResponse}", "OK");
-                    return;
-                }
-
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var emotions = JsonSerializer.Deserialize<List<EmotionEntry>>(jsonResponse, options);
 
@@ -81,29 +76,7 @@ namespace MindHaven
                 "Happy" => 8,
                 "Neutral" => 6,
                 "Sad" => 4,
-                "Angry" => 2,
-                _ => 0
-            };
-        }
-
-        private void OnYAxisLabelCreated(object sender, ChartAxisLabelEventArgs e)
-        {
-            if (double.TryParse(e.Label.ToString(), out double intensityValue))
-            {
-                e.Label = GetEmotionFromIntensity((int)intensityValue);
-            }
-        }
-
-        private string GetEmotionFromIntensity(int intensity)
-        {
-            return intensity switch
-            {
-                10 => "Excited",
-                8 => "Happy",
-                6 => "Neutral",
-                4 => "Sad",
-                2 => "Angry",
-                _ => "None"
+                "Angry" => 2
             };
         }
 
@@ -122,12 +95,6 @@ namespace MindHaven
                 var response = await client.PostAsJsonAsync("http://localhost/mindhaven/get_notes.php", requestData);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
 
-                if (!response.IsSuccessStatusCode)
-                {
-                    await DisplayAlert("Error", $"Server error: {jsonResponse}", "OK");
-                    return;
-                }
-
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var notes = JsonSerializer.Deserialize<List<NoteEntry>>(jsonResponse, options);
 
@@ -136,7 +103,6 @@ namespace MindHaven
                     NotesData.Clear();
                     foreach (var note in notes)
                     {
-                        Console.WriteLine($"Loaded Note: {note.Date} - {note.Content}"); // Debugging line
                         NotesData.Add(note);
                     }
                 }
@@ -144,6 +110,22 @@ namespace MindHaven
             catch (Exception ex)
             {
                 await DisplayAlert("Error", $"Failed to load notes: {ex.Message}", "OK");
+            }
+        }
+
+        private void OnLabelCreated(object sender, ChartAxisLabelEventArgs e)
+        {
+            if (int.TryParse(e.Label, out int value)) // Try to parse the label to an integer
+            {
+                e.Label = value switch
+                {
+                    10 => "Excited",
+                    8 => "Happy",
+                    6 => "Neutral",
+                    4 => "Sad",
+                    2 => "Angry",
+                    _ => e.Label 
+                };
             }
         }
 
@@ -157,7 +139,7 @@ namespace MindHaven
         public class NoteEntry
         {
             public string Date { get; set; }
-            public string Content { get; set; }
+            [JsonPropertyName("note")] public string Content { get; set; }
         }
     }
 }

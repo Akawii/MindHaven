@@ -455,7 +455,6 @@ C:\Users\angel\source\repos\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.190
 C:\Users\angel\source\repos\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\angel\source\repos\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\angel\source\repos\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Internal.FrameworkUdk.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AboutAssets.txt
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\splashSplashScreen.scale-100.png
@@ -464,6 +463,7 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\splashSpla
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\splashSplashScreen.scale-200.png
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\splashSplashScreen.scale-400.png
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\FluentUI.cs
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiMaterialAssets.ttf
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\OpenSans-Regular.ttf
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\OpenSans-Semibold.ttf
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\logo.scale-100.png
@@ -527,6 +527,7 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\marshal.dl
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.DirectManipulation.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Display.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.InputStateManager.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Internal.FrameworkUdk.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.UI.Composition.OSSupport.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.UI.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.UI.Input.dll
@@ -751,6 +752,8 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MindHaven.
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MindHaven.pdb
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -785,6 +788,10 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Licensing.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Charts.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Core.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -847,6 +854,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetize
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauisplash.stamp
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\FluentUI.cs
+C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\MauiMaterialAssets.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.png
@@ -929,11 +937,3 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\pri.resfil
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\MauiMaterialAssets.ttf
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiMaterialAssets.ttf
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Licensing.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Charts.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Core.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Speech.dll

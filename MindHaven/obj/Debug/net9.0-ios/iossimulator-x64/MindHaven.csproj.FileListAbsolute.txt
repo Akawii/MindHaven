@@ -312,6 +312,8 @@ C:\Users\angel\source\repos\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulato
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\MindHaven.runtimeconfig.json
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\MindHaven.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\MindHaven.pdb
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -327,6 +329,9 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Essentials.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Graphics.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Newtonsoft.Json.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Licensing.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Charts.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Core.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -563,6 +568,7 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet-n
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.inputs
@@ -572,7 +578,6 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\spla
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.stamp
-C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\logo.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -585,6 +590,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Asset
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\logo.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
@@ -593,6 +599,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.outputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.stamp
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\FluentUI.cs
+C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiMaterialAssets.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\actool\_PartialAppManifest.items
@@ -620,10 +627,3 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\refint\MindHaven.dl
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\MindHaven.pdb
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\MindHaven.genruntimeconfig.cache
 C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\ref\MindHaven.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Licensing.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Charts.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\Syncfusion.Maui.Core.dll
-C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
-C:\MindHaven\MindHaven\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiMaterialAssets.ttf
-C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll

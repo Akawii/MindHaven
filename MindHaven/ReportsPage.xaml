@@ -43,7 +43,10 @@
                                 </syncfusion:SfCartesianChart.XAxes>
 
                                 <syncfusion:SfCartesianChart.YAxes>
-                                    <syncfusion:NumericalAxis Minimum="0" Maximum="10" Interval="2">
+                                    <syncfusion:NumericalAxis LabelCreated="OnLabelCreated"
+                                  Minimum="2"
+                                  Maximum="10"
+                                  Interval="2">
                                         <syncfusion:NumericalAxis.Title>
                                             <syncfusion:ChartAxisTitle Text="Emotions" />
                                         </syncfusion:NumericalAxis.Title>
@@ -51,9 +54,9 @@
                                 </syncfusion:SfCartesianChart.YAxes>
 
                                 <syncfusion:LineSeries ItemsSource="{Binding EmotionData}" 
-                                                       XBindingPath="Date" 
-                                                       YBindingPath="Intensity"
-                                                       ShowMarkers="True">
+                           XBindingPath="Date" 
+                           YBindingPath="Intensity"
+                           ShowMarkers="True">
                                     <syncfusion:LineSeries.MarkerSettings>
                                         <syncfusion:ChartMarkerSettings Width="10" Height="10" Type="Circle"/>
                                     </syncfusion:LineSeries.MarkerSettings>
@@ -72,26 +75,31 @@
                                     <DataTemplate>
                                         <toolkit:Expander>
                                             <toolkit:Expander.Header>
-                                                <Button Text="{Binding Date}" 
-                                                        FontSize="16" 
-                                                        FontAttributes="Bold"
-                                                        BackgroundColor="{StaticResource PrimaryColor}" 
-                                                        TextColor="White"/>
+                                                <Frame Padding="10" 
+                           CornerRadius="10"
+                           BackgroundColor="{StaticResource PrimaryColor}">
+                                                    <Label Text="{Binding Date}" 
+                               FontSize="16" 
+                               FontAttributes="Bold" 
+                               TextColor="White"/>
+                                                </Frame>
                                             </toolkit:Expander.Header>
                                             <toolkit:Expander.Content>
                                                 <Frame Padding="10" 
-                                                       CornerRadius="10" 
-                                                       Margin="5" 
-                                                       BackgroundColor="{StaticResource BackgroundLight}">
+                           CornerRadius="10" 
+                           Margin="5" 
+                           BackgroundColor="{StaticResource BackgroundLight}">
                                                     <Label Text="{Binding Content}" 
-                                                           FontSize="14" 
-                                                           TextColor="{StaticResource TextColorLight}" />
+                               FontSize="14" 
+                               TextColor="{StaticResource TextColorLight}" 
+                               IsVisible="{Binding Content, Converter={StaticResource NullToVisibilityConverter}}"/>
                                                 </Frame>
                                             </toolkit:Expander.Content>
                                         </toolkit:Expander>
                                     </DataTemplate>
                                 </CollectionView.ItemTemplate>
                             </CollectionView>
+
 
                         </VerticalStackLayout>
                     </ScrollView>
