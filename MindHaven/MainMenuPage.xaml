@@ -1,55 +1,88 @@
-﻿<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MindHaven.MainMenuPage"
-            Title="Main Menu">
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindHaven.MainMenuPage"
+             Title="Main Menu">
 
-    <!-- Hamburger Menu -->
-    <FlyoutPage.Flyout>
-        <ContentPage Title="Menu" BackgroundColor="{StaticResource BackgroundDark}">
-            <VerticalStackLayout Padding="20" Spacing="15">
+    <Grid>
+        <!-- Menu Button on Top Left Corner (Opens Menu) -->
+        <Button x:Name="MenuButton"
+                Text="☰"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Clicked="OnMenuButtonClicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"/>
 
-                <Label Text="Menu" FontSize="24" FontAttributes="Bold"
-                       TextColor="{StaticResource TextColorLight}" HorizontalOptions="Center"/>
+        <!-- Full-Height Sliding Menu (Ensuring It Overlays Other Elements) -->
+        <Frame x:Name="MenuPopup"
+               IsVisible="False"
+               Padding="15"
+               CornerRadius="0"
+               BackgroundColor="{StaticResource BackgroundDark}"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="Start"
+               WidthRequest="250"
+               TranslationX="-250"
+               IsClippedToBounds="True"
+               ZIndex="10">
+            <!-- Ensures the menu is above other elements -->
 
-                <Button Text="Emotional Diary"
-                        Clicked="OnEmotionalDiaryClicked"
-                        BackgroundColor="{StaticResource PrimaryColor}"
-                        TextColor="White"/>
+            <Grid>
+                <!-- Close Menu Button (Arrow) -->
+                <Button x:Name="CloseMenuButton"
+                        Text="←"
+                        FontSize="24"
+                        BackgroundColor="Transparent"
+                        Clicked="OnMenuButtonClicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10"/>
 
-                <Button Text="Reports"
-                        Clicked="OnReportsPageClicked"
-                        BackgroundColor="{StaticResource PrimaryColor}"
-                        TextColor="White"/>
+                <!-- Menu Items -->
+                <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
+                    <Label Text="Menu"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TextColorLight}"/>
 
-            </VerticalStackLayout>
-        </ContentPage>
-    </FlyoutPage.Flyout>
+                    <Button Text="Emotional Diary"
+                            Clicked="OnEmotionalDiaryClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"
+                            IsEnabled="True"
+                            InputTransparent="False"/>
 
-    <!-- Main Content Area -->
-    <FlyoutPage.Detail>
-        <NavigationPage>
-            <x:Arguments>
-                <ContentPage Title="Main Menu" BackgroundColor="{StaticResource BackgroundDark}">
+                    <Button Text="Reports"
+                            Clicked="OnReportsClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"
+                            IsEnabled="True"
+                            InputTransparent="False"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
 
-                    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+        <!-- Main Content Area (Lower ZIndex to Prevent Blocking) -->
+        <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center" ZIndex="0">
+            <!-- Logo -->
+            <Image Source="logo.png"
+                   HeightRequest="120"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
 
-                        <!-- Logo -->
-                        <Image Source="logo.png" HeightRequest="120" Aspect="AspectFit"
-                               HorizontalOptions="Center" Margin="0,0,0,20"/>
+            <!-- Welcome Message -->
+            <Label Text="Welcome to MindHaven!"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource TextColorLight}"/>
 
-                        <!-- Welcome Message -->
-                        <Label Text="Welcome to MindHaven!"
-                               FontSize="28" FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               TextColor="{StaticResource TextColorLight}"/>
-
-                        <Label Text="Use the menu to navigate to different features."
-                               FontSize="16" HorizontalOptions="Center"
-                               TextColor="{StaticResource TextColorLight}"/>
-                    </VerticalStackLayout>
-                </ContentPage>
-            </x:Arguments>
-        </NavigationPage>
-    </FlyoutPage.Detail>
-
-</FlyoutPage>
+            <Label Text="Use the menu to navigate to different features."
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource TextColorLight}"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

@@ -937,3 +937,9 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\pri.resfil
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\hearth_icon.scale-100.png
+C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\hearth_icon.scale-100.png
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plugin.LocalNotification.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll

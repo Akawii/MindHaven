@@ -43,7 +43,7 @@ namespace MindHaven
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 // Change 'localhost' to your actual IP if testing on a mobile emulator
-                var response = await client.PostAsync("http://localhost/mindhaven/register.php", content);
+                var response = await client.PostAsync("http://172.20.10.2/mindhaven/register.php", content);
                 string responseData = await response.Content.ReadAsStringAsync();
 
                 // Show full response for debugging

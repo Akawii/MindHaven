@@ -34,7 +34,7 @@ namespace MindHaven
 
             try
             {
-                var response = await client.PostAsync("http://localhost/mindhaven/login.php", content);
+                var response = await client.PostAsync("http://172.20.10.2/mindhaven/login.php", content);
                 string result = await response.Content.ReadAsStringAsync();
 
                 Console.WriteLine($"Server Response: {result}"); // Debugging Output

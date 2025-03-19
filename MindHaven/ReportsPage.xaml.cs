@@ -11,8 +11,10 @@ using System.Text.Json.Serialization;
 
 namespace MindHaven
 {
-    public partial class ReportsPage : FlyoutPage
+    public partial class ReportsPage : ContentPage
     {
+        private bool isMenuOpen = false;
+
         public ObservableCollection<EmotionEntry> EmotionData { get; set; } = new();
         public ObservableCollection<NoteEntry> NotesData { get; set; } = new();
         private static readonly HttpClient client = new();
@@ -24,12 +26,6 @@ namespace MindHaven
             LoadEmotionData();
             LoadNotesData();
         }
-
-        private async void OnMainMenuClicked(object sender, EventArgs e)
-        {
-            Application.Current.MainPage = new MainMenuPage();
-        }
-
         private async void LoadEmotionData()
         {
             int userId = Preferences.Get("UserId", 0);
@@ -140,6 +136,44 @@ namespace MindHaven
         {
             public string Date { get; set; }
             [JsonPropertyName("note")] public string Content { get; set; }
+        }
+
+        private async void OnEmotionalDiaryClicked(object sender, EventArgs e)
+        {
+            await CloseMenu();
+            Application.Current.MainPage = new EmotionalDiaryPage();
+        }
+
+        private async void OnMainMenuClicked(object sender, EventArgs e)
+        {
+            await CloseMenu();
+            Application.Current.MainPage = new MainMenuPage();
+        }
+
+
+        private async void OnMenuButtonClicked(object sender, EventArgs e)
+        {
+            if (isMenuOpen)
+            {
+                await CloseMenu();
+            }
+            else
+            {
+                MenuPopup.IsVisible = true;
+                await MenuPopup.TranslateTo(0, 0, 250, Easing.CubicIn);
+                isMenuOpen = true;
+            }
+        }
+
+
+        private async Task CloseMenu()
+        {
+            if (isMenuOpen)
+            {
+                await MenuPopup.TranslateTo(-250, 0, 250, Easing.CubicOut);
+                MenuPopup.IsVisible = false;
+                isMenuOpen = false;
+            }
         }
     }
 }
