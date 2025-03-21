@@ -38,7 +38,7 @@ namespace MindHaven
             try
             {
                 var requestData = new { user_id = userId };
-                var response = await client.PostAsJsonAsync("http://localhost/mindhaven/reports.php", requestData);
+                var response = await client.PostAsJsonAsync("http://172.20.10.2/mindhaven/reports.php", requestData);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
 
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };

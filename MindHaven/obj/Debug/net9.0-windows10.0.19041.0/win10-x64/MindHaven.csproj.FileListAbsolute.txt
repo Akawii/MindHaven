@@ -467,6 +467,7 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\MauiMateri
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\OpenSans-Regular.ttf
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\OpenSans-Semibold.ttf
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\logo.scale-100.png
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\hearth_icon.scale-100.png
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLargeTile.scale-400.png
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLargeTile.scale-200.png
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLargeTile.scale-150.png
@@ -771,6 +772,8 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Essentials.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.InteractiveExperiences.Projection.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WinUI.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppLifecycle.Projection.dll
@@ -788,9 +791,11 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plugin.LocalNotification.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Licensing.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Charts.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Core.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
@@ -858,6 +863,7 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetize
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.png
+C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\hearth_icon.scale-100.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -937,9 +943,3 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\pri.resfil
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\hearth_icon.scale-100.png
-C:\MindHaven\MindHaven\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\hearth_icon.scale-100.png
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Toolkit.Uwp.Notifications.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plugin.LocalNotification.dll
-C:\MindHaven\MindHaven\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll

@@ -19,6 +19,13 @@ namespace MindHaven
             Application.Current.MainPage = new EmotionalDiaryPage();
         }
 
+        private async void OnUserProfilePageClicked(object sender, EventArgs e)
+        {
+            await CloseMenu();
+            Application.Current.MainPage = new UserProfilePage();
+        }
+
+
         private async void OnReportsClicked(object sender, EventArgs e)
         {
             await CloseMenu();

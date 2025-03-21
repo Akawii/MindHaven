@@ -25,7 +25,6 @@ namespace MindHaven
             string email = emailEntry.Text?.Trim();
             string password = passwordEntry.Text?.Trim();
 
-            // Validate fields
             if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) ||
                 string.IsNullOrWhiteSpace(birthday) || string.IsNullOrWhiteSpace(username) ||
                 string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
@@ -34,22 +33,21 @@ namespace MindHaven
                 return;
             }
 
-            // Construct JSON
             var registerData = new { firstName, lastName, birthday, username, email, password };
             string json = JsonConvert.SerializeObject(registerData);
 
             try
             {
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                // Change 'localhost' to your actual IP if testing on a mobile emulator
                 var response = await client.PostAsync("http://172.20.10.2/mindhaven/register.php", content);
                 string responseData = await response.Content.ReadAsStringAsync();
 
-                // Show full response for debugging
-                await DisplayAlert("Server Response", responseData, "OK");
+                if (!response.IsSuccessStatusCode)
+                {
+                    await DisplayAlert("Server Error", $"HTTP {(int)response.StatusCode}: {response.ReasonPhrase}\n{responseData}", "OK");
+                    return;
+                }
 
-                // Parse response
                 var result = JsonConvert.DeserializeObject<dynamic>(responseData);
                 if (result != null && result.status == "success")
                 {
@@ -58,13 +56,17 @@ namespace MindHaven
                 }
                 else
                 {
-                    string errorMessage = result?.message ?? "Failed to register";
+                    string errorMessage = result?.message ?? "Unknown error occurred";
                     await DisplayAlert("Error", errorMessage, "OK");
                 }
             }
+            catch (HttpRequestException httpEx)
+            {
+                await DisplayAlert("Connection Error", "Could not connect to the server. Please check your internet connection and try again.\n" + httpEx.Message, "OK");
+            }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", "Server error: " + ex.Message, "OK");
+                await DisplayAlert("Unexpected Error", "An unexpected error occurred: " + ex.Message, "OK");
             }
         }
     }

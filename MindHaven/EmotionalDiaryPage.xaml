@@ -1,57 +1,87 @@
-﻿<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MindHaven.EmotionalDiaryPage">
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindHaven.EmotionalDiaryPage">
 
-    <!-- Side Menu -->
-    <FlyoutPage.Flyout>
-        <ContentPage Title="Menu" BackgroundColor="{StaticResource BackgroundDark}">
-            <VerticalStackLayout Padding="20" Spacing="15">
+    <Grid>
+        <!-- Menu Button on Top Left Corner (Opens Menu) -->
+        <Button x:Name="MenuButton"
+                Text="☰"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Clicked="OnMenuButtonClicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"/>
 
-                <Label Text="Menu" FontSize="24" FontAttributes="Bold"
-                       TextColor="{StaticResource TextColorLight}" HorizontalOptions="Center"/>
+        <!-- Full-Height Sliding Menu -->
+        <Frame x:Name="MenuPopup"
+               IsVisible="False"
+               Padding="15"
+               CornerRadius="0"
+               BackgroundColor="{StaticResource BackgroundDark}"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="Start"
+               WidthRequest="250"
+               TranslationX="-250"
+               IsClippedToBounds="True"
+               ZIndex="10">
+            <Grid>
+                <!-- Close Menu Button -->
+                <Button x:Name="CloseMenuButton"
+                        Text="←"
+                        FontSize="24"
+                        BackgroundColor="Transparent"
+                        Clicked="OnMenuButtonClicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10"/>
 
-                <Button Text="Back to Main Menu"
-                        Clicked="OnMainMenuClicked"
-                        BackgroundColor="{StaticResource PrimaryColor}"
-                        TextColor="White"/>
-            </VerticalStackLayout>
-        </ContentPage>
-    </FlyoutPage.Flyout>
+                <!-- Menu Items -->
+                <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
+                    <Label Text="Menu"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TextColorLight}"/>
 
-    <!-- Main Emotional Diary Content -->
-    <FlyoutPage.Detail>
-        <NavigationPage>
-            <x:Arguments>
-                <ContentPage Title="Emotional Diary" BackgroundColor="{StaticResource BackgroundDark}">
-                    <VerticalStackLayout Padding="30" Spacing="15">
+                    <Button Text="Main Menu"
+                            Clicked="OnMainMenuClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
 
-                        <!-- Title -->
-                        <Label Text="Log Your Emotion" FontSize="24" FontAttributes="Bold" 
-                               HorizontalOptions="Center" TextColor="{StaticResource TextColorLight}"/>
+                    <Button Text="Reports"
+                            Clicked="OnReportsClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
+                    
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
 
-                        <!-- Auto-filled Date -->
-                        <Label x:Name="dateLabel" FontSize="18" TextColor="{StaticResource TextColorLight}"/>
+        <!-- Main Emotional Diary Content -->
+        <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center" ZIndex="0">
+            <!-- Title -->
+            <Label Text="Log Your Emotion" FontSize="24" FontAttributes="Bold" 
+                   HorizontalOptions="Center" TextColor="{StaticResource TextColorLight}"/>
 
-                        <!-- Emotion Selection Buttons -->
-                        <HorizontalStackLayout x:Name="emotionButtons" Spacing="10">
-                            <Button Text="Happy" Clicked="OnEmotionSelected" StyleId="Happy"/>
-                            <Button Text="Neutral" Clicked="OnEmotionSelected" StyleId="Neutral"/>
-                            <Button Text="Sad" Clicked="OnEmotionSelected" StyleId="Sad"/>
-                            <Button Text="Angry" Clicked="OnEmotionSelected" StyleId="Angry"/>
-                        </HorizontalStackLayout>
+            <!-- Auto-filled Date -->
+            <Label x:Name="dateLabel" FontSize="18" TextColor="{StaticResource TextColorLight}"/>
 
-                        <!-- Note Entry -->
-                        <Editor x:Name="noteEditor" Placeholder="Write your thoughts..." 
-                                HeightRequest="100" BackgroundColor="{StaticResource BackgroundDark}" 
-                                TextColor="{StaticResource TextColorLight}"/>
+            <!-- Emotion Selection Buttons -->
+            <HorizontalStackLayout x:Name="emotionButtons" Spacing="10">
+                <Button Text="Happy" Clicked="OnEmotionSelected" StyleId="Happy"/>
+                <Button Text="Neutral" Clicked="OnEmotionSelected" StyleId="Neutral"/>
+                <Button Text="Sad" Clicked="OnEmotionSelected" StyleId="Sad"/>
+                <Button Text="Angry" Clicked="OnEmotionSelected" StyleId="Angry"/>
+            </HorizontalStackLayout>
 
-                        <!-- Save Button -->
-                        <Button Text="Save Entry" Clicked="OnSaveClicked" 
-                                BackgroundColor="{StaticResource PrimaryColor}" TextColor="White"/>
-                    </VerticalStackLayout>
-                </ContentPage>
-            </x:Arguments>
-        </NavigationPage>
-    </FlyoutPage.Detail>
+            <!-- Note Entry -->
+            <Editor x:Name="noteEditor" Placeholder="Write your thoughts..." 
+                    HeightRequest="100" BackgroundColor="{StaticResource BackgroundDark}" 
+                    TextColor="{StaticResource TextColorLight}"/>
 
-</FlyoutPage>
+            <!-- Save Button -->
+            <Button Text="Save Entry" Clicked="OnSaveClicked" 
+                    BackgroundColor="{StaticResource PrimaryColor}" TextColor="White"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

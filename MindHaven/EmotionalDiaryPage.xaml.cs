@@ -8,8 +8,9 @@ using Microsoft.Maui.Controls;
 
 namespace MindHaven
 {
-    public partial class EmotionalDiaryPage : FlyoutPage
+    public partial class EmotionalDiaryPage : ContentPage
     {
+        private bool isMenuOpen = false;
         private static readonly HttpClient client = new HttpClient(new HttpClientHandler());
         private string selectedEmotion;
 
@@ -67,7 +68,7 @@ namespace MindHaven
 
             try
             {
-                var response = await client.PostAsync("http://localhost/mindhaven/emotionaldiary.php", content);
+                var response = await client.PostAsync("http://172.20.10.2/mindhaven/emotionaldiary.php", content);
                 string result = await response.Content.ReadAsStringAsync();
 
                 var jsonResponse = JsonSerializer.Deserialize<ResponseData>(result);
@@ -99,7 +100,37 @@ namespace MindHaven
 
         private async void OnMainMenuClicked(object sender, EventArgs e)
         {
+            await CloseMenu();
             Application.Current.MainPage = new MainMenuPage();
+        }
+
+        private async void OnReportsClicked(object sender, EventArgs e)
+        {
+            await CloseMenu();
+            Application.Current.MainPage = new ReportsPage();
+        }
+  
+        private async void OnMenuButtonClicked(object sender, EventArgs e)
+        {
+            if (isMenuOpen)
+            {
+                await CloseMenu();
+            }
+            else
+            {
+                MenuPopup.IsVisible = true;
+                await MenuPopup.TranslateTo(0, 0, 250, Easing.CubicIn);
+                isMenuOpen = true;
+            }
+        }
+        private async Task CloseMenu()
+        {
+            if (isMenuOpen)
+            {
+                await MenuPopup.TranslateTo(-250, 0, 250, Easing.CubicOut);
+                MenuPopup.IsVisible = false;
+                isMenuOpen = false;
+            }
         }
 
         private class ResponseData

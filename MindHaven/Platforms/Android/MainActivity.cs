@@ -29,6 +29,6 @@ public class MainActivity : MauiAppCompatActivity
         notificationService.SendNotification("Teste", "Isso é uma notificação de teste!");
 
         // Testar uma notificação agendada para 1 minuto depois
-        NotificationScheduler.ScheduleDailyNotification("Lembrete de Bem-Estar", "Hora de relaxar!", TimeSpan.FromMinutes(1));
+        NotificationScheduler.ScheduleTestNotification("Lembrete de Bem-Estar", "Hora de relaxar!");
     }
 }

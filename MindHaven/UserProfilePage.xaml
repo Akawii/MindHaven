@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindHaven.UserProfilePage"
+             BackgroundColor="{StaticResource BackgroundDark}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+
+            <!-- Profile Picture -->
+            <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" 
+                BackgroundColor="{StaticResource CardBackground}" HasShadow="True" Padding="0">
+                <Image x:Name="ProfileImage" HeightRequest="150" WidthRequest="150" 
+            Aspect="AspectFill"/>
+            </Frame>
+
+
+
+            <!-- User Information Section -->
+            <Frame BackgroundColor="{StaticResource CardBackground}" Padding="15" CornerRadius="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Nome Completo:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
+                    <Entry x:Name="FirstName" IsReadOnly="True" Placeholder="Primeiro Nome"
+                           BackgroundColor="{StaticResource EntryBackground}" 
+                           TextColor="{StaticResource EntryTextColor}"/>
+
+                    <Entry x:Name="LastName" IsReadOnly="True" Placeholder="Último Nome"
+                           BackgroundColor="{StaticResource EntryBackground}" 
+                           TextColor="{StaticResource EntryTextColor}"/>
+
+                    <Label Text="Nome de Utilizador:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
+                    <Entry x:Name="UserName" IsReadOnly="True" Placeholder="Username"
+                           BackgroundColor="{StaticResource EntryBackground}" 
+                           TextColor="{StaticResource EntryTextColor}"/>
+
+                    <Label Text="Email:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
+                    <Entry x:Name="UserEmail" IsReadOnly="True" Placeholder="Email"
+                           BackgroundColor="{StaticResource EntryBackground}" 
+                           TextColor="{StaticResource EntryTextColor}"/>
+
+                    <Label Text="Data de Nascimento:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
+                    <Entry x:Name="UserBirthday" IsReadOnly="True" Placeholder="DD/MM/YYYY"
+                           BackgroundColor="{StaticResource EntryBackground}" 
+                           TextColor="{StaticResource EntryTextColor}"/>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

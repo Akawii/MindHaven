@@ -317,6 +317,7 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Ma
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Essentials.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Graphics.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Newtonsoft.Json.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Plugin.LocalNotification.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Licensing.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Maui.Charts.dll
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Syncfusion.Maui.Core.dll
@@ -551,10 +552,15 @@ C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-d
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet-nativeaot.a
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.a
 C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.dylib
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\MindHaven\MindHaven\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo.png
+C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\hearth_icon.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -567,7 +573,6 @@ C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\logo.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
 C:\MindHaven\MindHaven\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
