@@ -1,6 +1,6 @@
 # User Stories
 
-#Aplicação Móvel
+# Aplicação Móvel
 
 ## Para o Utilizador
 
