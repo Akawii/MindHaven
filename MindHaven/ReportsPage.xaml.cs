@@ -26,6 +26,7 @@ namespace MindHaven
             LoadEmotionData();
             LoadNotesData();
         }
+
         private async void LoadEmotionData()
         {
             int userId = Preferences.Get("UserId", 0);
@@ -44,23 +45,27 @@ namespace MindHaven
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var emotions = JsonSerializer.Deserialize<List<EmotionEntry>>(jsonResponse, options);
 
-                if (emotions != null)
+                if (emotions == null || emotions.Count == 0)
                 {
-                    EmotionData.Clear();
-                    foreach (var emotion in emotions)
+                    await DisplayAlert("Information", "No emotion data available.", "OK");
+                    return;
+                }
+
+                EmotionData.Clear();
+                foreach (var emotion in emotions)
+                {
+                    EmotionData.Add(new EmotionEntry
                     {
-                        EmotionData.Add(new EmotionEntry
-                        {
-                            Date = emotion.Date,
-                            Emotion = emotion.Emotion,
-                            Intensity = MapEmotionToIntensity(emotion.Emotion)
-                        });
-                    }
+                        Date = emotion.Date,
+                        Emotion = emotion.Emotion,
+                        Intensity = MapEmotionToIntensity(emotion.Emotion)
+                    });
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await DisplayAlert("Error", $"Failed to load data: {ex.Message}", "OK");
+                // Silently fail - no error popup
+                return;
             }
         }
 
@@ -72,7 +77,8 @@ namespace MindHaven
                 "Happy" => 8,
                 "Neutral" => 6,
                 "Sad" => 4,
-                "Angry" => 2
+                "Angry" => 2,
+                _ => 0
             };
         }
 
@@ -94,24 +100,28 @@ namespace MindHaven
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var notes = JsonSerializer.Deserialize<List<NoteEntry>>(jsonResponse, options);
 
-                if (notes != null)
+                if (notes == null || notes.Count == 0)
                 {
-                    NotesData.Clear();
-                    foreach (var note in notes)
-                    {
-                        NotesData.Add(note);
-                    }
+                    await DisplayAlert("Information", "No notes available.", "OK");
+                    return;
+                }
+
+                NotesData.Clear();
+                foreach (var note in notes)
+                {
+                    NotesData.Add(note);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await DisplayAlert("Error", $"Failed to load notes: {ex.Message}", "OK");
+                // Silently fail - no error popup
+                return;
             }
         }
 
         private void OnLabelCreated(object sender, ChartAxisLabelEventArgs e)
         {
-            if (int.TryParse(e.Label, out int value)) // Try to parse the label to an integer
+            if (int.TryParse(e.Label, out int value))
             {
                 e.Label = value switch
                 {
@@ -120,7 +130,7 @@ namespace MindHaven
                     6 => "Neutral",
                     4 => "Sad",
                     2 => "Angry",
-                    _ => e.Label 
+                    _ => e.Label
                 };
             }
         }
@@ -150,7 +160,6 @@ namespace MindHaven
             Application.Current.MainPage = new MainMenuPage();
         }
 
-
         private async void OnMenuButtonClicked(object sender, EventArgs e)
         {
             if (isMenuOpen)
@@ -164,7 +173,6 @@ namespace MindHaven
                 isMenuOpen = true;
             }
         }
-
 
         private async Task CloseMenu()
         {

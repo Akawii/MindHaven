@@ -5,7 +5,7 @@
     <StackLayout Padding="10">
         <Entry x:Name="firstNameEntry" Placeholder="First Name" />
         <Entry x:Name="lastNameEntry" Placeholder="Last Name" />
-        <Entry x:Name="birthdayEntry" Placeholder="Birthday" />
+        <Entry x:Name="birthdayEntry" Placeholder="Birthday (YYYY-MM-DD)" />
         <Entry x:Name="usernameEntry" Placeholder="Username" />
         <Entry x:Name="emailEntry" Placeholder="Email" />
         <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" />

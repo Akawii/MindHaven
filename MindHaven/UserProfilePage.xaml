@@ -1,50 +1,107 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MindHaven.UserProfilePage"
-             BackgroundColor="{StaticResource BackgroundDark}">
+             x:Class="MindHaven.UserProfilePage">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
+    <Grid>
+        <!-- Menu Button on Top Left Corner (Opens Menu) -->
+        <Button x:Name="MenuButton"
+                Text="☰"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                Clicked="OnMenuButtonClicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"
+                ZIndex="10" />
 
-            <!-- Profile Picture -->
-            <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" 
-                BackgroundColor="{StaticResource CardBackground}" HasShadow="True" Padding="0">
-                <Image x:Name="ProfileImage" HeightRequest="150" WidthRequest="150" 
-            Aspect="AspectFill"/>
-            </Frame>
+        <!-- Full-Height Sliding Menu -->
+        <Frame x:Name="MenuPopup"
+               IsVisible="False"
+               Padding="15"
+               CornerRadius="0"
+               BackgroundColor="{StaticResource BackgroundDark}"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="Start"
+               WidthRequest="250"
+               TranslationX="-250"
+               IsClippedToBounds="True"
+               ZIndex="9">
+            <Grid>
+                <!-- Close Menu Button -->
+                <Button x:Name="CloseMenuButton"
+                        Text="←"
+                        FontSize="24"
+                        BackgroundColor="Transparent"
+                        Clicked="OnMenuButtonClicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10"/>
 
+                <!-- Menu Items -->
+                <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
+                    <Label Text="Menu"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TextColorLight}"/>
 
+                    <Button Text="Main Menu"
+                            Clicked="OnMainMenuClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
 
-            <!-- User Information Section -->
-            <Frame BackgroundColor="{StaticResource CardBackground}" Padding="15" CornerRadius="10" HasShadow="True">
-                <VerticalStackLayout Spacing="10">
-
-                    <Label Text="Nome Completo:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
-                    <Entry x:Name="FirstName" IsReadOnly="True" Placeholder="Primeiro Nome"
-                           BackgroundColor="{StaticResource EntryBackground}" 
-                           TextColor="{StaticResource EntryTextColor}"/>
-
-                    <Entry x:Name="LastName" IsReadOnly="True" Placeholder="Último Nome"
-                           BackgroundColor="{StaticResource EntryBackground}" 
-                           TextColor="{StaticResource EntryTextColor}"/>
-
-                    <Label Text="Nome de Utilizador:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
-                    <Entry x:Name="UserName" IsReadOnly="True" Placeholder="Username"
-                           BackgroundColor="{StaticResource EntryBackground}" 
-                           TextColor="{StaticResource EntryTextColor}"/>
-
-                    <Label Text="Email:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
-                    <Entry x:Name="UserEmail" IsReadOnly="True" Placeholder="Email"
-                           BackgroundColor="{StaticResource EntryBackground}" 
-                           TextColor="{StaticResource EntryTextColor}"/>
-
-                    <Label Text="Data de Nascimento:" FontAttributes="Bold" TextColor="{StaticResource TextColorLight}"/>
-                    <Entry x:Name="UserBirthday" IsReadOnly="True" Placeholder="DD/MM/YYYY"
-                           BackgroundColor="{StaticResource EntryBackground}" 
-                           TextColor="{StaticResource EntryTextColor}"/>
+                    <Button Text="Reports"
+                            Clicked="OnReportsClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
                 </VerticalStackLayout>
-            </Frame>
+            </Grid>
+        </Frame>
 
-        </VerticalStackLayout>
-    </ScrollView>
+        <!-- Main Content -->
+        <ScrollView>
+            <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center" ZIndex="0">
+                <!-- Profile Image -->
+                <Frame WidthRequest="100"
+                       HeightRequest="100"
+                       CornerRadius="50"
+                       IsClippedToBounds="True"
+                       Padding="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                <Image x:Name="ProfileImage"
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       Aspect="AspectFill" />
+                    
+                </Frame>
+
+                <Button x:Name="ChoosePictureButton"
+                        Text="Choose Another Picture"
+                        Clicked="OnChoosePictureClicked"
+                        BackgroundColor="{StaticResource SecondaryColor}"
+                        TextColor="White"
+                        HorizontalOptions="Center"/>
+
+
+                <!-- Title -->
+                <Label Text="User Profile" FontSize="24" FontAttributes="Bold" 
+                       HorizontalOptions="Center" TextColor="{StaticResource TextColorLight}"/>
+
+                <!-- User Info Fields -->
+                <Entry x:Name="FirstName" Placeholder="First Name" IsReadOnly="false"/>
+                <Entry x:Name="LastName" Placeholder="Last Name" IsReadOnly="false"/>
+                <Entry x:Name="UserName" Placeholder="Username" IsReadOnly="false"/>
+                <Entry x:Name="UserEmail" Placeholder="Email" IsReadOnly="false"/>
+                <Entry x:Name="UserBirthday" Placeholder="Birthday" IsReadOnly="false"/>
+
+                <!-- Save Button -->
+                <Button x:Name="SaveButton"
+                        Text="Save Changes"
+                        Clicked="OnSaveClicked"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="White" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
 </ContentPage>

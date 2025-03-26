@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\MindHaven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\reportspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\reportspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReportsPage.xaml",
-              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\ReportsPage.xaml",
-              "RelativeDocumentMoniker": "MindHaven\\ReportsPage.xaml",
-              "ToolTip": "C:\\MindHaven\\MindHaven\\ReportsPage.xaml",
-              "RelativeToolTip": "MindHaven\\ReportsPage.xaml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-21T10:42:32.584Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,9 +28,21 @@
               "RelativeDocumentMoniker": "MindHaven\\UserProfilePage.xaml",
               "ToolTip": "C:\\MindHaven\\MindHaven\\UserProfilePage.xaml",
               "RelativeToolTip": "MindHaven\\UserProfilePage.xaml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-21T10:18:17.803Z",
+              "WhenOpened": "2025-03-25T11:55:06.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\UserProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "MindHaven\\UserProfilePage.xaml.cs",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\UserProfilePage.xaml.cs",
+              "RelativeToolTip": "MindHaven\\UserProfilePage.xaml.cs",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAswNsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T12:05:41.573Z",
               "EditorCaption": ""
             }
           ]
