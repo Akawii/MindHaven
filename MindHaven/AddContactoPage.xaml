@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindHaven.AddContactoPage"
+             Title="Add Emergency Contact"
+             Padding="0"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*" Padding="0">
+        <!-- Top Bar with Menu Button -->
+        <Grid Grid.Row="0" Padding="0">
+            <Button x:Name="MenuButton"
+                    Text="☰"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Clicked="OnMenuButtonClicked"
+                    Margin="10,10,0,0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"/>
+        </Grid>
+
+        <!-- Sliding Menu (Overlay) -->
+        <Frame x:Name="MenuPopup"
+               Grid.Row="0"
+               Grid.RowSpan="2"
+               IsVisible="False"
+               Padding="15"
+               CornerRadius="0"
+               BackgroundColor="{StaticResource BackgroundDark}"
+               WidthRequest="250"
+               TranslationX="-250"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="Start"
+               ZIndex="100">
+            <Grid>
+                <Button x:Name="CloseMenuButton"
+                        Text="←"
+                        FontSize="24"
+                        BackgroundColor="Transparent"
+                        Clicked="OnMenuButtonClicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10"/>
+
+                <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
+                    <Label Text="Menu"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TextColorLight}"/>
+                    <Button Text="Main Menu"
+                            Clicked="OnMainMenuClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
+                    <Button Text="Reports"
+                            Clicked="OnReportsClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1" ZIndex="0">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <!-- Name Entry -->
+                <Label Text="Name" FontSize="Medium" />
+                <Entry x:Name="NameEntry" Placeholder="Enter contact name" />
+
+                <!-- Country Picker for Phone -->
+                <Label Text="Country" FontSize="Medium" />
+                <Picker x:Name="CountryPicker" 
+                        Title="Select country" 
+                        ItemsSource="{Binding CountryList}" 
+                        ItemDisplayBinding="{Binding DisplayName}" 
+                        SelectedIndexChanged="OnCountrySelected" />
+
+                <!-- Phone Entry -->
+                <Label Text="Phone" FontSize="Medium" />
+                <Entry x:Name="PhoneEntry" 
+                       Placeholder="Enter phone number" 
+                       Keyboard="Telephone" />
+
+                <!-- Relationship Picker -->
+                <Label Text="Relationship" FontSize="Medium" />
+                <Picker x:Name="RelationshipPicker" 
+                        Title="Select relationship" 
+                        SelectedIndexChanged="OnRelationshipSelected">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Mom/Dad</x:String>
+                            <x:String>Brother/Sister</x:String>
+                            <x:String>Boyfriend/Girlfriend</x:String>
+                            <x:String>Husband/Wife</x:String>
+                            <x:String>Other</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Save Button -->
+                <Button Text="Save Contact" 
+                        Clicked="OnSaveClicked" 
+                        Margin="0,20,0,0" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

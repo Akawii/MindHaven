@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MindHaven.DataUser"
+             Title="User Profile"
+             Padding="0"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*" Padding="0">
+        <!-- Top Bar with Menu and Add Contact Buttons -->
+        <Grid Grid.Row="0" Padding="0">
+            <Button x:Name="MenuButton"
+                    Text="☰"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Clicked="OnMenuButtonClicked"
+                    Margin="10,10,0,0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"/>
+            <Button Text="+"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Margin="0,10,10,0"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    Clicked="OnAddContactClicked"/>
+        </Grid>
+
+        <!-- Sliding Menu (Overlay) -->
+        <Frame x:Name="MenuPopup"
+               Grid.Row="0"
+               Grid.RowSpan="2"
+               IsVisible="False"
+               Padding="15"
+               CornerRadius="0"
+               BackgroundColor="{StaticResource BackgroundDark}"
+               WidthRequest="250"
+               TranslationX="-250"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="Start"
+               ZIndex="100">
+            <Grid>
+                <Button x:Name="CloseMenuButton"
+                        Text="←"
+                        FontSize="24"
+                        BackgroundColor="Transparent"
+                        Clicked="OnMenuButtonClicked"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10"/>
+
+                <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
+                    <Label Text="Menu"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TextColorLight}"/>
+                    <Button Text="Main Menu"
+                            Clicked="OnMainMenuClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
+                    <Button Text="Reports"
+                            Clicked="OnReportsClicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1" ZIndex="0">
+            <AbsoluteLayout>
+                <ScrollView AbsoluteLayout.LayoutFlags="All"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="CenterAndExpand">
+                        <!-- Info Label -->
+                        <Label Text="User Information"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="Black"/>
+
+                        <!-- User Info Frame -->
+                        <Frame BackgroundColor="LightGray"
+                               Padding="15"
+                               CornerRadius="10"
+                               WidthRequest="300"
+                               HeightRequest="150"
+                               HorizontalOptions="Center">
+                            <VerticalStackLayout Spacing="10">
+                                <Label x:Name="FirstNameLabel"
+                                       FontSize="18"
+                                       TextColor="Black"
+                                       Text="Loading" />
+                                <BoxView HeightRequest="1" BackgroundColor="DarkGray" Margin="0,5"/>
+                                <Label x:Name="AgeLabel"
+                                       FontSize="18"
+                                       TextColor="Black"
+                                       Text="Age: Loading..." />
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <!-- Emergency Contacts Frame -->
+                        <Frame BackgroundColor="LightGray"
+                               Padding="15"
+                               CornerRadius="10"
+                               WidthRequest="300"
+                               HeightRequest="200"
+                               HorizontalOptions="Center">
+                            <VerticalStackLayout Spacing="10">
+                                <Label Text="Emergency Contacts"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"/>
+                                <StackLayout x:Name="ContactsStack" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

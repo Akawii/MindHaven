@@ -1,33 +1,37 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MindHaven.UserProfilePage">
+             x:Class="MindHaven.UserProfilePage"
+             Padding="0"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
 
-    <Grid>
-        <!-- Menu Button on Top Left Corner (Opens Menu) -->
-        <Button x:Name="MenuButton"
-                Text="☰"
-                FontSize="24"
-                BackgroundColor="Transparent"
-                Clicked="OnMenuButtonClicked"
-                HorizontalOptions="Start"
-                VerticalOptions="Start"
-                Margin="10"
-                ZIndex="10" />
+    <Grid RowDefinitions="Auto,*" Padding="0">
+        <!-- Menu Button -->
+        <Grid Grid.Row="0" Padding="0">
+            <Button x:Name="MenuButton"
+                    Text="☰"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Clicked="OnMenuButtonClicked"
+                    Margin="10,10,0,0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"/>
+        </Grid>
 
-        <!-- Full-Height Sliding Menu -->
+        <!-- Sliding Menu (Overlay) -->
         <Frame x:Name="MenuPopup"
+               Grid.Row="0"
+               Grid.RowSpan="2"
                IsVisible="False"
                Padding="15"
                CornerRadius="0"
                BackgroundColor="{StaticResource BackgroundDark}"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="Start"
                WidthRequest="250"
                TranslationX="-250"
-               IsClippedToBounds="True"
-               ZIndex="9">
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="Start"
+               ZIndex="100">
             <Grid>
-                <!-- Close Menu Button -->
                 <Button x:Name="CloseMenuButton"
                         Text="←"
                         FontSize="24"
@@ -36,19 +40,15 @@
                         HorizontalOptions="Start"
                         VerticalOptions="Start"
                         Margin="10"/>
-
-                <!-- Menu Items -->
                 <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
                     <Label Text="Menu"
                            FontSize="20"
                            FontAttributes="Bold"
                            TextColor="{StaticResource TextColorLight}"/>
-
                     <Button Text="Main Menu"
                             Clicked="OnMainMenuClicked"
                             BackgroundColor="{StaticResource PrimaryColor}"
                             TextColor="White"/>
-
                     <Button Text="Reports"
                             Clicked="OnReportsClicked"
                             BackgroundColor="{StaticResource PrimaryColor}"
@@ -57,10 +57,11 @@
             </Grid>
         </Frame>
 
-        <!-- Main Content -->
-        <ScrollView>
-            <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center" ZIndex="0">
-                <!-- Profile Image -->
+        <!-- Main Content Row -->
+        <ScrollView Grid.Row="1" ZIndex="0">
+            <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+                <Label Text="User Profile" FontSize="24" FontAttributes="Bold" 
+                       HorizontalOptions="Center" TextColor="{StaticResource TextColorLight}"/>
                 <Frame WidthRequest="100"
                        HeightRequest="100"
                        CornerRadius="50"
@@ -68,13 +69,11 @@
                        Padding="0"
                        HorizontalOptions="Center"
                        VerticalOptions="Center">
-                <Image x:Name="ProfileImage"
-                       WidthRequest="100"
-                       HeightRequest="100"
-                       Aspect="AspectFill" />
-                    
+                    <Image x:Name="ProfileImage"
+                           WidthRequest="100"
+                           HeightRequest="100"
+                           Aspect="AspectFill"/>
                 </Frame>
-
                 <Button x:Name="ChoosePictureButton"
                         Text="Choose Another Picture"
                         Clicked="OnChoosePictureClicked"
@@ -82,26 +81,70 @@
                         TextColor="White"
                         HorizontalOptions="Center"/>
 
+                <!-- User Info Fields with Fixed Label Width and Aligned Entries -->
+                <Frame BackgroundColor="Transparent" Padding="10" CornerRadius="8">
+                    <Grid ColumnDefinitions="100,*">
+                        <Label Text="First Name" TextColor="{StaticResource TextColorLight}" VerticalOptions="Center" Grid.Column="0"/>
+                        <Entry x:Name="FirstName" Placeholder="Enter First Name" 
+                               HorizontalOptions="FillAndExpand" 
+                               HorizontalTextAlignment="End" 
+                               Grid.Column="1"/>
+                    </Grid>
+                </Frame>
 
-                <!-- Title -->
-                <Label Text="User Profile" FontSize="24" FontAttributes="Bold" 
-                       HorizontalOptions="Center" TextColor="{StaticResource TextColorLight}"/>
+                <Frame BackgroundColor="Transparent" Padding="10" CornerRadius="8">
+                    <Grid ColumnDefinitions="100,*">
+                        <Label Text="Last Name" TextColor="{StaticResource TextColorLight}" VerticalOptions="Center" Grid.Column="0"/>
+                        <Entry x:Name="LastName" Placeholder="Enter Last Name" 
+                               HorizontalOptions="FillAndExpand" 
+                               HorizontalTextAlignment="End" 
+                               Grid.Column="1"/>
+                    </Grid>
+                </Frame>
 
-                <!-- User Info Fields -->
-                <Entry x:Name="FirstName" Placeholder="First Name" IsReadOnly="false"/>
-                <Entry x:Name="LastName" Placeholder="Last Name" IsReadOnly="false"/>
-                <Entry x:Name="UserName" Placeholder="Username" IsReadOnly="false"/>
-                <Entry x:Name="UserEmail" Placeholder="Email" IsReadOnly="false"/>
-                <Entry x:Name="UserBirthday" Placeholder="Birthday" IsReadOnly="false"/>
+                <Frame BackgroundColor="Transparent" Padding="10" CornerRadius="8">
+                    <Grid ColumnDefinitions="100,*">
+                        <Label Text="Username" TextColor="{StaticResource TextColorLight}" VerticalOptions="Center" Grid.Column="0"/>
+                        <Entry x:Name="UserName" Placeholder="Enter Username" 
+                               HorizontalOptions="FillAndExpand" 
+                               HorizontalTextAlignment="End" 
+                               Grid.Column="1"/>
+                    </Grid>
+                </Frame>
 
-                <!-- Save Button -->
+                <Frame BackgroundColor="Transparent" Padding="10" CornerRadius="8">
+                    <Grid ColumnDefinitions="100,*">
+                        <Label Text="Email" TextColor="{StaticResource TextColorLight}" VerticalOptions="Center" Grid.Column="0"/>
+                        <Entry x:Name="UserEmail" Placeholder="Enter Email" 
+                               HorizontalOptions="FillAndExpand" 
+                               HorizontalTextAlignment="End" 
+                               Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Padding="10" CornerRadius="8">
+                    <Grid ColumnDefinitions="100,*">
+                        <Label Text="Birthday" TextColor="{StaticResource TextColorLight}" VerticalOptions="Center" Grid.Column="0"/>
+                        <Entry x:Name="UserBirthday" Placeholder="Enter Birthday" 
+                               HorizontalOptions="FillAndExpand" 
+                               HorizontalTextAlignment="End" 
+                               Grid.Column="1"/>
+                    </Grid>
+                </Frame>
+
                 <Button x:Name="SaveButton"
                         Text="Save Changes"
                         Clicked="OnSaveClicked"
                         BackgroundColor="{StaticResource PrimaryColor}"
-                        TextColor="White" />
+                        TextColor="White"/>
+
+                <Button x:Name="PasswordButton"
+                        Text="Change Password"
+                        Clicked="OnPasswordClicked"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="White"/>
+
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
-
 </ContentPage>

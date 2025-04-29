@@ -52,6 +52,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -2574,6 +2587,19 @@
         "runtime": {
           "lib/net8.0-android34.0/GoogleGson.dll": {
             "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -5102,6 +5128,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -7624,6 +7663,19 @@
         "runtime": {
           "lib/net8.0-android34.0/GoogleGson.dll": {
             "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -10152,6 +10204,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -12677,6 +12742,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -15186,6 +15264,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -15688,6 +15779,19 @@
         },
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -16198,6 +16302,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -16700,6 +16817,19 @@
         },
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -17210,6 +17340,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -17712,6 +17855,19 @@
         },
         "runtime": {
           "lib/net9.0-ios18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -18222,6 +18378,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -18724,6 +18893,19 @@
         },
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -19234,6 +19416,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -19736,6 +19931,19 @@
         },
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -20246,6 +20454,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -20748,6 +20969,19 @@
         },
         "runtime": {
           "lib/net9.0-maccatalyst18.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -21255,6 +21489,19 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -22167,6 +22414,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -22983,6 +23243,19 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -23807,6 +24080,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -24627,6 +24913,19 @@
           }
         }
       },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -25443,6 +25742,19 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
             "related": ".xml"
           }
         }
@@ -26314,6 +26626,25 @@
         "lib/net8.0-android34.0/GoogleGson.pdb",
         "lib/net8.0-android34.0/GoogleGson.xml",
         "readme.md"
+      ]
+    },
+    "libphonenumber-csharp/9.0.2": {
+      "sha512": "uGBjXIPMdyzC5hRRXz+MphCzn1WkMBOKcvOdjvT/MfLubOkhCivaLhB53qZzUXY5fKpjrUOqiNV7BEun6K5/2Q==",
+      "type": "package",
+      "path": "libphonenumber-csharp/9.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/PhoneNumbers.dll",
+        "lib/net8.0/PhoneNumbers.xml",
+        "lib/net9.0/PhoneNumbers.dll",
+        "lib/net9.0/PhoneNumbers.xml",
+        "lib/netstandard2.0/PhoneNumbers.dll",
+        "lib/netstandard2.0/PhoneNumbers.xml",
+        "libphonenumber-csharp.9.0.2.nupkg.sha512",
+        "libphonenumber-csharp.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/9.0.0": {
@@ -30951,7 +31282,8 @@
       "Microsoft.NET.ILLink.Tasks >= 9.0.3",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.LocalNotification >= 11.1.4",
-      "Syncfusion.Maui.Charts >= 28.2.11"
+      "Syncfusion.Maui.Charts >= 28.2.11",
+      "libphonenumber-csharp >= 9.0.2"
     ],
     "net9.0-ios18.2": [
       "CommunityToolkit.Maui >= 11.1.0",
@@ -30960,7 +31292,8 @@
       "Microsoft.NET.ILLink.Tasks >= 9.0.3",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.LocalNotification >= 11.1.4",
-      "Syncfusion.Maui.Charts >= 28.2.11"
+      "Syncfusion.Maui.Charts >= 28.2.11",
+      "libphonenumber-csharp >= 9.0.2"
     ],
     "net9.0-maccatalyst18.2": [
       "CommunityToolkit.Maui >= 11.1.0",
@@ -30969,7 +31302,8 @@
       "Microsoft.NET.ILLink.Tasks >= 9.0.3",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.LocalNotification >= 11.1.4",
-      "Syncfusion.Maui.Charts >= 28.2.11"
+      "Syncfusion.Maui.Charts >= 28.2.11",
+      "libphonenumber-csharp >= 9.0.2"
     ],
     "net9.0-windows10.0.19041": [
       "CommunityToolkit.Maui >= 11.1.0",
@@ -30977,7 +31311,8 @@
       "Microsoft.Maui.Controls >= 9.0.50",
       "Newtonsoft.Json >= 13.0.3",
       "Plugin.LocalNotification >= 11.1.4",
-      "Syncfusion.Maui.Charts >= 28.2.11"
+      "Syncfusion.Maui.Charts >= 28.2.11",
+      "libphonenumber-csharp >= 9.0.2"
     ]
   },
   "packageFolders": {
@@ -31076,6 +31411,10 @@
           "Syncfusion.Maui.Charts": {
             "target": "Package",
             "version": "[28.2.11, )"
+          },
+          "libphonenumber-csharp": {
+            "target": "Package",
+            "version": "[9.0.2, )"
           }
         },
         "imports": [
@@ -31131,6 +31470,10 @@
           "Syncfusion.Maui.Charts": {
             "target": "Package",
             "version": "[28.2.11, )"
+          },
+          "libphonenumber-csharp": {
+            "target": "Package",
+            "version": "[9.0.2, )"
           }
         },
         "imports": [
@@ -31186,6 +31529,10 @@
           "Syncfusion.Maui.Charts": {
             "target": "Package",
             "version": "[28.2.11, )"
+          },
+          "libphonenumber-csharp": {
+            "target": "Package",
+            "version": "[9.0.2, )"
           }
         },
         "imports": [
@@ -31236,6 +31583,10 @@
           "Syncfusion.Maui.Charts": {
             "target": "Package",
             "version": "[28.2.11, )"
+          },
+          "libphonenumber-csharp": {
+            "target": "Package",
+            "version": "[9.0.2, )"
           }
         },
         "imports": [

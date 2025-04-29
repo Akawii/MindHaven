@@ -43,10 +43,6 @@ namespace MindHaven
                 if (userData != null)
                 {
                     FirstName.Text = userData.ContainsKey("first_name") ? userData["first_name"] : "";
-                    LastName.Text = userData.ContainsKey("last_name") ? userData["last_name"] : "";
-                    UserName.Text = userData.ContainsKey("username") ? userData["username"] : "";
-                    UserEmail.Text = userData.ContainsKey("email") ? userData["email"] : "";
-                    UserBirthday.Text = userData.ContainsKey("birthday") ? userData["birthday"] : "";
 
                     if (userData.ContainsKey("profile_picture_base64") && !string.IsNullOrEmpty(userData["profile_picture_base64"]))
                     {
@@ -68,7 +64,11 @@ namespace MindHaven
                 await DisplayAlert("Error", "Failed to load profile data: " + ex.Message, "OK");
             }
         }
-
+        private async void OnEmergencyModeClicked(object sender, EventArgs e)
+        {
+            await CloseMenu();
+            Application.Current.MainPage = new EmergencyModePage();
+        }
         private void OnInfoClicked(object sender, EventArgs e)
         {
             LogoutPopupOverlay.IsVisible = false;
@@ -88,6 +88,13 @@ namespace MindHaven
             }
         }
 
+
+        private async void OnEmergencyClicked(object sender, EventArgs e)
+        {
+            await CloseMenu();
+            Application.Current.MainPage = new DataUser();
+        }
+        
 
         private void OnConfirmLogout(object sender, EventArgs e)
         {

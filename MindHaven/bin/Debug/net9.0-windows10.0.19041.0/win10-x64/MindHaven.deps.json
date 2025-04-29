@@ -15,6 +15,7 @@
           "Newtonsoft.Json": "13.0.3",
           "Plugin.LocalNotification": "11.1.4",
           "Syncfusion.Maui.Charts": "28.2.11",
+          "libphonenumber-csharp": "9.0.2",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.2903.40",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
@@ -56,6 +57,14 @@
           "lib/net9.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "assemblyVersion": "11.1.0.0",
             "fileVersion": "11.1.0.0"
+          }
+        }
+      },
+      "libphonenumber-csharp/9.0.2": {
+        "runtime": {
+          "lib/net9.0/PhoneNumbers.dll": {
+            "assemblyVersion": "9.0.2.0",
+            "fileVersion": "9.0.2.0"
           }
         }
       },
@@ -614,6 +623,13 @@
       "sha512": "sha512-EG5mKPzNAMbi14IxCgxe13W+65y6qv5rPXQtbzdPnnXiBJ+uO4/8iaKDazj2pyGFHTuAF0i7SCnx+RfrFXUD0w==",
       "path": "communitytoolkit.maui.core/11.1.0",
       "hashPath": "communitytoolkit.maui.core.11.1.0.nupkg.sha512"
+    },
+    "libphonenumber-csharp/9.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uGBjXIPMdyzC5hRRXz+MphCzn1WkMBOKcvOdjvT/MfLubOkhCivaLhB53qZzUXY5fKpjrUOqiNV7BEun6K5/2Q==",
+      "path": "libphonenumber-csharp/9.0.2",
+      "hashPath": "libphonenumber-csharp.9.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.0": {
       "type": "package",

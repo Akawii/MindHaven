@@ -72,20 +72,21 @@
         }
 
         private async void OnMenuButtonClicked(object sender, EventArgs e)
+        {
+            if (MenuPopup.IsVisible)
             {
-                if (isMenuOpen)
-                {
-                    await CloseMenu();
-                }
-                else
-                {
-                    MenuPopup.IsVisible = true;
-                    await MenuPopup.TranslateTo(0, 0, 250, Easing.CubicIn);
-                    isMenuOpen = true;
-                }
+                await MenuPopup.TranslateTo(-250, 0, 250, Easing.Linear);
+                MenuPopup.IsVisible = false;
             }
+            else
+            {
+                MenuPopup.IsVisible = true;
+                await MenuPopup.TranslateTo(0, 0, 250, Easing.Linear);
+            }
+        }
 
-            private async Task CloseMenu()
+
+        private async Task CloseMenu()
             {
                 if (isMenuOpen)
                 {
@@ -106,7 +107,13 @@
                 Application.Current.MainPage = new MainMenuPage();
             }
 
-            private async void OnChoosePictureClicked(object sender, EventArgs e)
+            private async void OnPasswordClicked(object sender, EventArgs e)
+            {
+                await CloseMenu();
+                Application.Current.MainPage = new ChangePasswordPage();
+            }
+
+        private async void OnChoosePictureClicked(object sender, EventArgs e)
             {
                 try
                 {

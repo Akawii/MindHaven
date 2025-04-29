@@ -1,240 +1,246 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MindHaven.MainMenuPage">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
 
-        <!-- Menu Button (Top Left) -->
-        <Button x:Name="MenuButton"
-                Text="☰"
-                FontSize="24"
-                BackgroundColor="Transparent"
-                Clicked="OnMenuButtonClicked"
-                HorizontalOptions="Start"
-                VerticalOptions="Start"
-                Margin="10"
-                Grid.Column="0"/>
+    <AbsoluteLayout>
 
-        <!-- Profile Button (Top Right) -->
-        <ImageButton x:Name="ProfileButton"
-                     HeightRequest="50"
-                     WidthRequest="50"
-                     CornerRadius="25"
-                     BackgroundColor="{StaticResource CardBackground}"
-                     VerticalOptions="Start"
-                     HorizontalOptions="End"
-                     Margin="10"
-                     Clicked="OnProfileButtonClicked"
-                     Aspect="AspectFill"
-                     Padding="0"
-                     Grid.Column="2"/>
+        <!-- Main Grid Layout -->
+        <Grid x:Name="MainGrid"
+              AbsoluteLayout.LayoutBounds="0,0,1,1"
+              AbsoluteLayout.LayoutFlags="All">
 
-        <!-- Sliding Left Menu -->
-        <Frame x:Name="MenuPopup"
-               IsVisible="False"
-               Padding="15"
-               CornerRadius="0"
-               BackgroundColor="{StaticResource BackgroundDark}"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="Start"
-               WidthRequest="250"
-               TranslationX="-250"
-               IsClippedToBounds="True"
-               ZIndex="10"
-               Grid.ColumnSpan="3">
-            <Grid>
-                <Button x:Name="CloseMenuButton"
-                        Text="←"
-                        FontSize="24"
-                        BackgroundColor="Transparent"
-                        Clicked="OnMenuButtonClicked"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Start"
-                        Margin="10"/>
-                <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
-                    <Label Text="Menu"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="{StaticResource TextColorLight}"/>
-                    <Button Text="Emotional Diary"
-                            Clicked="OnEmotionalDiaryClicked"
-                            BackgroundColor="{StaticResource PrimaryColor}"
-                            TextColor="White"/>
-                    <Button Text="Reports"
-                            Clicked="OnReportsClicked"
-                            BackgroundColor="{StaticResource PrimaryColor}"
-                            TextColor="White"/>
-                </VerticalStackLayout>
-            </Grid>
-        </Frame>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
 
-        <!-- Sliding Right Profile Panel -->
-        <Frame x:Name="ProfilePopup"
-               IsVisible="False"
-               Padding="15,15,30,15"
-               CornerRadius="0"
-               BackgroundColor="{StaticResource BackgroundDark}"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="End"
-               WidthRequest="250"
-               TranslationX="250"
-               IsClippedToBounds="True"
-               ZIndex="10"
-               Grid.ColumnSpan="3">
-            <Grid VerticalOptions="CenterAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+            <!-- Menu Button (Top Left) -->
+            <Button x:Name="MenuButton"
+                    Text="☰"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Clicked="OnMenuButtonClicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Grid.Column="0"/>
 
-                <Button x:Name="CloseProfileButton"
-                        Text="→"
-                        FontSize="24"
-                        BackgroundColor="Transparent"
-                        Clicked="OnProfileButtonClicked"
-                        HorizontalOptions="End"
-                        VerticalOptions="Start"
-                        Margin="0,10,10,10"
-                        Grid.Row="0"/>
+            <!-- Profile Button (Top Right) -->
+            <ImageButton x:Name="ProfileButton"
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         CornerRadius="25"
+                         BackgroundColor="{StaticResource CardBackground}"
+                         VerticalOptions="Start"
+                         HorizontalOptions="End"
+                         Margin="10"
+                         Clicked="OnProfileButtonClicked"
+                         Aspect="AspectFill"
+                         Padding="0"
+                         Grid.Column="2"/>
 
-                <ScrollView Grid.Row="1"
-                            VerticalOptions="CenterAndExpand"
-                            Padding="0,0,10,0">
-                    <VerticalStackLayout Padding="20,10,0,10"
-                                         Spacing="15"
-                                         VerticalOptions="CenterAndExpand">
-                        <Frame CornerRadius="75"
-                               HeightRequest="150"
-                               WidthRequest="150"
-                               BackgroundColor="{StaticResource CardBackground}"
-                               HasShadow="True"
-                               Padding="0"
-                               HorizontalOptions="Center">
-                            <Image x:Name="ProfileImage"
+            <!-- Sliding Left Menu -->
+            <Frame x:Name="MenuPopup"
+                   IsVisible="False"
+                   Padding="15"
+                   CornerRadius="0"
+                   BackgroundColor="{StaticResource BackgroundDark}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="Start"
+                   WidthRequest="250"
+                   TranslationX="-250"
+                   IsClippedToBounds="True"
+                   ZIndex="10"
+                   Grid.ColumnSpan="3"
+                   Grid.RowSpan="2">
+                <Grid>
+                    <Button x:Name="CloseMenuButton"
+                            Text="←"
+                            FontSize="24"
+                            BackgroundColor="Transparent"
+                            Clicked="OnMenuButtonClicked"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Margin="10"/>
+                    <VerticalStackLayout Spacing="10" Padding="20" Margin="0,40,0,0">
+                        <Label Text="Menu"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource TextColorLight}"/>
+                        <Button Text="Emotional Diary"
+                                Clicked="OnEmotionalDiaryClicked"
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                TextColor="White"/>
+                        <Button Text="Reports"
+                                Clicked="OnReportsClicked"
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                TextColor="White"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Sliding Right Profile Panel -->
+            <Frame x:Name="ProfilePopup"
+                   IsVisible="False"
+                   Padding="15,15,30,15"
+                   CornerRadius="0"
+                   BackgroundColor="{StaticResource BackgroundDark}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="End"
+                   WidthRequest="250"
+                   TranslationX="250"
+                   IsClippedToBounds="True"
+                   ZIndex="10"
+                   Grid.ColumnSpan="3"
+                   Grid.RowSpan="2">
+                <Grid VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="CloseProfileButton"
+                            Text="→"
+                            FontSize="24"
+                            BackgroundColor="Transparent"
+                            Clicked="OnProfileButtonClicked"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            Margin="0,10,10,10"
+                            Grid.Row="0"/>
+
+                    <ScrollView Grid.Row="1"
+                                VerticalOptions="FillAndExpand"
+                                Padding="0,0,10,0">
+                        <VerticalStackLayout Padding="20,10,0,10"
+                                             Spacing="15"
+                                             VerticalOptions="Start">
+                            <Frame CornerRadius="75"
                                    HeightRequest="150"
                                    WidthRequest="150"
-                                   Aspect="AspectFill"/>
-                        </Frame>
-                        <Frame BackgroundColor="{StaticResource CardBackground}"
-                               Padding="15"
-                               CornerRadius="10"
-                               HasShadow="True"
-                               HorizontalOptions="FillAndExpand">
-                            <VerticalStackLayout Spacing="10">
-                                <Label Text="Nome Completo:"
-                                       FontAttributes="Bold"
-                                       TextColor="{StaticResource TextColorLight}"/>
-                                <Entry x:Name="FirstName"
-                                       IsReadOnly="True"
-                                       Placeholder="Primeiro Nome"
-                                       BackgroundColor="{StaticResource EntryBackground}"
-                                       TextColor="{StaticResource EntryTextColor}"/>
-                                <Entry x:Name="LastName"
-                                       IsReadOnly="True"
-                                       Placeholder="Último Nome"
-                                       BackgroundColor="{StaticResource EntryBackground}"
-                                       TextColor="{StaticResource EntryTextColor}"/>
-                                <Label Text="Nome de Utilizador:"
-                                       FontAttributes="Bold"
-                                       TextColor="{StaticResource TextColorLight}"/>
-                                <Entry x:Name="UserName"
-                                       IsReadOnly="True"
-                                       Placeholder="Username"
-                                       BackgroundColor="{StaticResource EntryBackground}"
-                                       TextColor="{StaticResource EntryTextColor}"/>
-                                <Label Text="Email:"
-                                       FontAttributes="Bold"
-                                       TextColor="{StaticResource TextColorLight}"/>
-                                <Entry x:Name="UserEmail"
-                                       IsReadOnly="True"
-                                       Placeholder="Email"
-                                       BackgroundColor="{StaticResource EntryBackground}"
-                                       TextColor="{StaticResource EntryTextColor}"/>
-                                <Label Text="Data de Nascimento:"
-                                       FontAttributes="Bold"
-                                       TextColor="{StaticResource TextColorLight}"/>
-                                <Entry x:Name="UserBirthday"
-                                       IsReadOnly="True"
-                                       Placeholder="DD/MM/YYYY"
-                                       BackgroundColor="{StaticResource EntryBackground}"
-                                       TextColor="{StaticResource EntryTextColor}"/>
-                            </VerticalStackLayout>
-                        </Frame>
+                                   BackgroundColor="{StaticResource CardBackground}"
+                                   HasShadow="True"
+                                   Padding="0"
+                                   HorizontalOptions="Center">
+                                <Image x:Name="ProfileImage"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       Aspect="AspectFill"/>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent"
+                                   Padding="15"
+                                   CornerRadius="10"
+                                   HasShadow="True"
+                                   HorizontalOptions="FillAndExpand">
+                                <VerticalStackLayout Spacing="10"
+                                                     HorizontalOptions="Center"
+                                                     VerticalOptions="Center">
+                                    <Label x:Name="FirstName"
+                                           Text="Primeiro Nome"
+                                           TextColor="{StaticResource EntryTextColor}"
+                                           FontSize="16"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                </VerticalStackLayout>
+                            </Frame>
 
-                        <Button Text="Change Info"
-                                BackgroundColor="LightBlue"
-                                TextColor="White"
-                                Clicked="OnInfoClicked"
-                                HorizontalOptions="FillAndExpand"/>
+                            <Button Text="Dados de Utilizador"
+                                    BackgroundColor="LightBlue"
+                                    TextColor="White"
+                                    Clicked="OnInfoClicked"
+                                    HorizontalOptions="FillAndExpand"/>
 
-                        <!-- Logout Button -->
-                        <Button Text="Log Out"
-                                BackgroundColor="Red"
-                                TextColor="White"
-                                Clicked="OnLogoutButtonClicked"
-                                HorizontalOptions="FillAndExpand"/>
-                    </VerticalStackLayout>
-                </ScrollView>
-            </Grid>
-        </Frame>
+                            <Button Text="Ficha Médica"
+                                    BackgroundColor="LightBlue"
+                                    TextColor="White"
+                                    Clicked="OnEmergencyClicked"
+                                    HorizontalOptions="FillAndExpand"/>
 
-        <!-- Main Content Area -->
-        <VerticalStackLayout Padding="30"
-                             Spacing="15"
-                             VerticalOptions="Center"
-                             ZIndex="0"
-                             Grid.Column="1">
-            <Image Source="logo.png"
-                   HeightRequest="120"
-                   Aspect="AspectFit"
-                   HorizontalOptions="Center"
-                   Margin="0,0,0,20"/>
-            <Label Text="Welcome to MindHaven!"
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="{StaticResource TextColorLight}"/>
-            <Label Text="Use the menu to navigate to different features."
-                   FontSize="16"
-                   HorizontalOptions="Center"
-                   TextColor="{StaticResource TextColorLight}"/>
-        </VerticalStackLayout>
+                            <Button Text="Log Out"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Clicked="OnLogoutButtonClicked"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </Grid>
+            </Frame>
 
-        <!-- Full-Screen Overlay for Logout Popup -->
-        <AbsoluteLayout IsVisible="False" x:Name="LogoutPopupOverlay"
-                        BackgroundColor="Black" Opacity="0.6"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"
-                        ZIndex="100"/>
-
-        <!-- Centered Logout Popup -->
-        <Frame x:Name="LogoutPopup"
-               IsVisible="False"
-               Padding="20"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource CardBackground}"
-               HasShadow="True"
-               WidthRequest="280"
-               ZIndex="101"
-               AbsoluteLayout.LayoutFlags="PositionProportional"
-               AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1">
-            <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
-                <Label Text="Are you sure you want to log out?"
-                       FontSize="16"
+            <!-- Main Content Area -->
+            <VerticalStackLayout Padding="30"
+                                 Spacing="15"
+                                 VerticalOptions="Center"
+                                 ZIndex="0"
+                                 Grid.Column="1">
+                <Image Source="logo.png"
+                       HeightRequest="120"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,20"/>
+                <Label Text="Welcome to MindHaven!"
+                       FontSize="28"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        TextColor="{StaticResource TextColorLight}"/>
-                <HorizontalStackLayout Spacing="10">
-                    <Button Text="Yes" BackgroundColor="Red" TextColor="White"
-                            Clicked="OnConfirmLogout"/>
-                    <Button Text="No" BackgroundColor="{StaticResource PrimaryColor}"
-                            TextColor="White" Clicked="OnCancelLogout"/>
-                </HorizontalStackLayout>
+                <Label Text="Use the menu to navigate to different features."
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       TextColor="{StaticResource TextColorLight}"/>
             </VerticalStackLayout>
-        </Frame>
-    </Grid>
+
+            <!-- Full-Screen Overlay for Logout Popup -->
+            <AbsoluteLayout IsVisible="False" x:Name="LogoutPopupOverlay"
+                            BackgroundColor="Black" Opacity="0.6"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            ZIndex="100"/>
+
+            <!-- Centered Logout Popup -->
+            <Frame x:Name="LogoutPopup"
+                   IsVisible="False"
+                   Padding="20"
+                   CornerRadius="10"
+                   BackgroundColor="{StaticResource CardBackground}"
+                   HasShadow="True"
+                   WidthRequest="280"
+                   ZIndex="101"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1">
+                <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+                    <Label Text="Are you sure you want to log out?"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="{StaticResource TextColorLight}"/>
+                    <HorizontalStackLayout Spacing="10">
+                        <Button Text="Yes" BackgroundColor="Red" TextColor="White"
+                                Clicked="OnConfirmLogout"/>
+                        <Button Text="No" BackgroundColor="{StaticResource PrimaryColor}"
+                                TextColor="White" Clicked="OnCancelLogout"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+
+        <!-- Emergency Mode Button (now overlayed, not blocking popups) -->
+        <Button Text="Emergency Mode"
+                BackgroundColor="Red"
+                TextColor="White"
+                FontSize="18"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                WidthRequest="200"
+                Padding="10,5"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="0.5,1,AutoSize,AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Margin="0,0,0,20"
+                Clicked="OnEmergencyModeClicked"/>
+
+    </AbsoluteLayout>
 </ContentPage>
