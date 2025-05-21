@@ -195,3 +195,11 @@ playservicesbasement-18.3.0.aar
 playservicestasks-18.1.0.aar
 playservicesbase-18.4.0.aar
 playserviceslocation-21.2.0.aar
+SkiaSharp.dll
+SkiaSharp.Resources.dll
+SkiaSharp.SceneGraph.dll
+SkiaSharp.Skottie.dll
+SkiaSharp.Views.Android.dll
+SkiaSharp.Views.Maui.Controls.dll
+SkiaSharp.Views.Maui.Core.dll
+SkiaSharp.Views.Android.aar

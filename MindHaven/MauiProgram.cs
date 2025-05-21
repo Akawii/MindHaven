@@ -16,6 +16,7 @@ namespace MindHaven
                 .UseMauiCommunityToolkit() // Register CommunityToolkit
                 .ConfigureFonts(fonts =>
                 {
+                    fonts.AddFont("InknutAntiqua-Regular.ttf", "InknutAntiqua");
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });

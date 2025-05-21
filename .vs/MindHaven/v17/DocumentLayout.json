@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\MindHaven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\emergencymodepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\emergencymodepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\emergencymodepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\emergencymodepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|c:\\mindhaven\\mindhaven\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9D5FD80B-9D6C-4578-BBF6-834F22C604F5}|MindHaven\\MindHaven.csproj|solutionrelative:mindhaven\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EmergencyModePage.xaml.cs",
-              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\EmergencyModePage.xaml.cs",
-              "RelativeDocumentMoniker": "MindHaven\\EmergencyModePage.xaml.cs",
-              "ToolTip": "C:\\MindHaven\\MindHaven\\EmergencyModePage.xaml.cs",
-              "RelativeToolTip": "MindHaven\\EmergencyModePage.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCcAAABdAAAAAAAAAA==",
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "MindHaven\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\LoginPage.xaml.cs",
+              "RelativeToolTip": "MindHaven\\LoginPage.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwEQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T08:43:26.047Z",
+              "WhenOpened": "2025-05-14T09:14:46.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmergencyModePage.xaml",
-              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\EmergencyModePage.xaml",
-              "RelativeDocumentMoniker": "MindHaven\\EmergencyModePage.xaml",
-              "ToolTip": "C:\\MindHaven\\MindHaven\\EmergencyModePage.xaml",
-              "RelativeToolTip": "MindHaven\\EmergencyModePage.xaml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAiwE8AAAAAAAAAAAAAAA==",
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\MindHaven\\MindHaven\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "MindHaven\\LoginPage.xaml",
+              "ToolTip": "C:\\MindHaven\\MindHaven\\LoginPage.xaml",
+              "RelativeToolTip": "MindHaven\\LoginPage.xaml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwEcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T08:25:04.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:29:52.139Z"
             }
           ]
         }

@@ -36,30 +36,22 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="FillAndExpand"
                             ZIndex="100"/>
-
         </Grid>
 
-        <!-- Emergency Mode Breathing Bubble -->
+        <!-- Emergency Mode Breathing Bubble with Robot Face -->
         <Frame x:Name="BreathingBubble"
                WidthRequest="200"
                HeightRequest="200"
-               BackgroundColor="LightBlue"
+               BackgroundColor="#A0D8EF"
                CornerRadius="100"
                HasShadow="True"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
                AbsoluteLayout.LayoutBounds="0.5,0.6,AutoSize,AutoSize"
                AbsoluteLayout.LayoutFlags="PositionProportional">
-            <!-- Text Label that will change based on the breathing phase -->
-            <Label x:Name="BreathingText"
-                   Text="Inspire..."
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   TextColor="White"
-                   FontSize="20" />
         </Frame>
 
-        <!-- Emergency Mode Button (now overlayed, not blocking popups) -->
+        <!-- Emergency Mode Button -->
         <Button Text="Contactar Contactos Emergencia"
                 BackgroundColor="Red"
                 TextColor="White"
@@ -73,7 +65,5 @@
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 Margin="0,0,0,20"
                 Clicked="OnSendEmergencyMessage"/>
-
     </AbsoluteLayout>
-
 </ContentPage>

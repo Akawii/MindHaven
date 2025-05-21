@@ -1,4 +1,11 @@
 FluentUI.cs
+InknutAntiqua-Black.ttf
+InknutAntiqua-Bold.ttf
+InknutAntiqua-ExtraBold.ttf
+InknutAntiqua-Light.ttf
+InknutAntiqua-Medium.ttf
+InknutAntiqua-Regular.ttf
+InknutAntiqua-SemiBold.ttf
 MauiMaterialAssets.ttf
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
@@ -48,6 +55,7 @@ appiconWideTile.scale-125.png
 appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
+background.scale-100.jpg
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
@@ -55,9 +63,11 @@ dotnet_bot.scale-200.png
 dotnet_bot.scale-400.png
 hearth_icon.scale-100.png
 logo.scale-100.png
+logo1.scale-100.png
+wallapaper2.scale-100.jpg
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png
 splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
-AboutAssets.txt
+gradient-loader-02.json

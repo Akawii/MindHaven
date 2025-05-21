@@ -1,26 +1,93 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MindHaven.LoginPage"
-             BackgroundColor="{StaticResource BackgroundDark}">
+             NavigationPage.HasNavigationBar="False">
 
-    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="background.jpg"
+               Aspect="AspectFill"
+               ZIndex="-2" />
 
-        <!-- Logo at the top with spacing -->
-        <Image Source="logo.png" 
-               HeightRequest="120" 
-               Aspect="AspectFit"
-               HorizontalOptions="Center"
-               Margin="0,0,0,20"/>
-        <!-- Medium space below the logo -->
+        <!-- Top bar -->
+        <BoxView HeightRequest="24"
+                 BackgroundColor="#C2B9D6"
+                 VerticalOptions="Start"
+                 ZIndex="-1"/>
 
-       
+        <!-- Main Content -->
+        <VerticalStackLayout Padding="30,20" Spacing="20" VerticalOptions="CenterAndExpand">
 
-        <Entry x:Name="emailEntry" Placeholder="Email" Keyboard="Email"
-               TextColor="{StaticResource TextColorLight}" BackgroundColor="{StaticResource BackgroundDark}"/>
-        <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"
-               TextColor="{StaticResource TextColorLight}" BackgroundColor="{StaticResource BackgroundDark}"/>
+            <Image Source="logo.png"
+                   HeightRequest="160"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,30" />
 
-        <Button Text="Login" Clicked="OnLoginClicked" BackgroundColor="{StaticResource PrimaryColor}" TextColor="White"/>
-        <Button Text="Create an Account" Clicked="OnRegisterClicked" BackgroundColor="Transparent" TextColor="{StaticResource PrimaryColor}"/>
-    </VerticalStackLayout>
+            <Frame CornerRadius="24" Padding="0" HasShadow="False" BackgroundColor="#C2B9D6" HeightRequest="47">
+                <Entry x:Name="emailEntry" Placeholder="Email"
+                       BackgroundColor="Transparent"
+                       TextColor="White"
+                       VerticalTextAlignment="Center"
+                       FontFamily="OpenSans-Regular"
+                       FontSize="12"
+                       Margin="20,0"/>
+            </Frame>
+
+            <Frame CornerRadius="24" Padding="0" HasShadow="False" BackgroundColor="#C2B9D6" HeightRequest="47">
+                <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True"
+                       BackgroundColor="Transparent"
+                       TextColor="White"               
+                       FontFamily="OpenSans"
+                       FontSize="12"
+                       Margin="20,0"/>
+            </Frame>
+        </VerticalStackLayout>
+
+        <!-- Bottom Bar and Buttons -->
+        <Grid VerticalOptions="End" Padding="0,0,0,0">
+            <!-- Bottom bar background -->
+            <BoxView HeightRequest="50"
+                     BackgroundColor="#C2B9D6"
+                     VerticalOptions="End"
+                     ZIndex="-1" />
+
+            <HorizontalStackLayout Padding="40,0" HorizontalOptions="Center" Spacing="100">
+                <Frame WidthRequest="96" HeightRequest="96" CornerRadius="48"
+                       BackgroundColor="#C2B9D6"
+                       HasShadow="True">
+                    <Button Text="Login"
+                            Clicked="OnLoginClicked"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="10"
+                            FontFamily="OpenSans"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                </Frame>
+
+                <Frame WidthRequest="96" HeightRequest="96" CornerRadius="48"
+                       BackgroundColor="#C2B9D6"
+                       HasShadow="True"
+                       Padding="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                    <Label Text="Create&#10;Account"
+                           TextColor="White"
+                           FontSize="10"
+                           FontFamily="OpenSans"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           LineHeight="1.4">
+                        
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegisterClicked" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+            </HorizontalStackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>
