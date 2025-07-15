@@ -19,6 +19,7 @@ attr;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\171\jl\res\values\attr.x
 attr;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\180\jl\res\values\values.xml
 background;obj\Debug\net9.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 background;obj\Debug\net9.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
+base-config;obj\Debug\net9.0-android\res\xml\network_security_config.xml
 bitmap;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\180\jl\res\drawable\common_google_signin_btn_icon_dark_normal.xml
 bitmap;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\180\jl\res\drawable\common_google_signin_btn_icon_disabled.xml
 bitmap;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\180\jl\res\drawable\common_google_signin_btn_icon_light_normal.xml
@@ -245,6 +246,7 @@ layer-list;obj\Debug\net9.0-android\resizetizer\sp\drawable-v31\maui_splash_imag
 microsoft.maui.controls.platform.compatibility.ShellFlyoutLayout;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\169\jl\res\layout\flyoutcontent.xml
 monochrome;obj\Debug\net9.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 monochrome;obj\Debug\net9.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
+network-security-config;obj\Debug\net9.0-android\res\xml\network_security_config.xml
 padding;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\180\jl\res\drawable\common_google_signin_btn_icon_disabled.xml
 padding;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\180\jl\res\drawable\common_google_signin_btn_text_disabled.xml
 paths;C:\MindHaven\MindHaven\obj\Debug\net9.0-android\lp\172\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml

@@ -1,9 +1,9 @@
 using System;
 using System.Net.Http;
-using System.Text;
+using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Microsoft.Maui.Storage; // Needed for Preferences
+using Microsoft.Maui.Storage;
 
 namespace MindHaven
 {
@@ -23,53 +23,58 @@ namespace MindHaven
 
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                await DisplayAlert("Error", "Email and Password cannot be empty.", "OK");
+                await DisplayAlert("Erro", "Email e senha não podem estar vazios.", "OK");
                 return;
             }
 
-            var loginData = new { email, password };
-            string jsonData = JsonSerializer.Serialize(loginData);
-
-            var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var content = new FormUrlEncodedContent(new[]
+            {
+        new KeyValuePair<string, string>("email", email),
+        new KeyValuePair<string, string>("password", password)
+    });
 
             try
             {
-                var response = await client.PostAsync("http://172.20.10.2/mindhaven/login.php", content);
+                var response = await client.PostAsync("https://mindhaven.pt/login.php", content);
                 string result = await response.Content.ReadAsStringAsync();
 
-                Console.WriteLine($"Server Response: {result}"); // Debugging Output
-
+                Console.WriteLine($"Resposta do servidor: {result}"); // Log raw response
                 if (!response.IsSuccessStatusCode)
                 {
-                    await DisplayAlert("Error", "Failed to connect to server.", "OK");
+                    await DisplayAlert("Erro", "Falha ao conectar ao servidor.", "OK");
                     return;
                 }
 
-                // Ensure the response is valid JSON
-                if (result.Trim().StartsWith("<"))
+                if (string.IsNullOrWhiteSpace(result) || result.Trim().StartsWith("<"))
                 {
-                    await DisplayAlert("Error", "Unexpected server response. Please check the API.", "OK");
+                    await DisplayAlert("Erro", "Resposta inesperada do servidor. Verifique o PHP.", "OK");
                     return;
                 }
 
                 var jsonResponse = JsonSerializer.Deserialize<LoginResponse>(result);
+                if (jsonResponse == null)
+                {
+                    Console.WriteLine("Deserialization failed. Raw response: " + result);
+                    await DisplayAlert("Erro", "Falha ao processar a resposta JSON.", "OK");
+                    return;
+                }
 
-                if (jsonResponse != null && jsonResponse.status == "success")
+                if (jsonResponse.status == "success")
                 {
                     Preferences.Set("UserId", jsonResponse.user_id);
                     await SecureStorage.SetAsync("UserId", jsonResponse.user_id.ToString());
-                    await DisplayAlert("Success", "Login successful!", "OK");
+                    await DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
                     Application.Current.MainPage = new MainMenuPage();
                 }
                 else
                 {
-                    await DisplayAlert("Login Failed", jsonResponse?.message ?? "Unknown error occurred.", "OK");
+                    await DisplayAlert("Falha no Login", jsonResponse.message ?? "Erro desconhecido.", "OK");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception: {ex.Message}");
-                await DisplayAlert("Error", "An error occurred while logging in.", "OK");
+                Console.WriteLine($"Exceção: {ex.Message}");
+                await DisplayAlert("Erro", $"Ocorreu um erro ao fazer login: {ex.Message}", "OK");
             }
         }
 

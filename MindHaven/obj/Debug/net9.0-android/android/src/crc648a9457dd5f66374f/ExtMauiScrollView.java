@@ -10,6 +10,8 @@ public class ExtMauiScrollView
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onOverScrolled:(IIZZ)V:GetOnOverScrolled_IIZZHandler\n" +
+			"n_scrollTo:(II)V:GetScrollTo_IIHandler\n" +
 			"n_computeScroll:()V:GetComputeScrollHandler\n" +
 			"n_onInterceptTouchEvent:(Landroid/view/MotionEvent;)Z:GetOnInterceptTouchEvent_Landroid_view_MotionEvent_Handler\n" +
 			"n_onTouchEvent:(Landroid/view/MotionEvent;)Z:GetOnTouchEvent_Landroid_view_MotionEvent_Handler\n" +
@@ -40,6 +42,20 @@ public class ExtMauiScrollView
 			mono.android.TypeManager.Activate ("Syncfusion.Maui.Core.Hosting.ExtMauiScrollView, Syncfusion.Maui.Core", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib", this, new java.lang.Object[] { p0, p1, p2 });
 		}
 	}
+
+	public void onOverScrolled (int p0, int p1, boolean p2, boolean p3)
+	{
+		n_onOverScrolled (p0, p1, p2, p3);
+	}
+
+	private native void n_onOverScrolled (int p0, int p1, boolean p2, boolean p3);
+
+	public void scrollTo (int p0, int p1)
+	{
+		n_scrollTo (p0, p1);
+	}
+
+	private native void n_scrollTo (int p0, int p1);
 
 	public void computeScroll ()
 	{

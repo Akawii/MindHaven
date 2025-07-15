@@ -2,7 +2,7 @@ using Microsoft.Maui.Controls;
 using System;
 using System.IO;
 using System.Net.Http;
-using System.Net.Http.Json; // Added for PostAsJsonAsync
+using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Storage;
@@ -19,7 +19,7 @@ namespace MindHaven
         public MainMenuPage()
         {
             InitializeComponent();
-            LoadProfileData(); // Load profile data (including image) when the page initializes
+            LoadProfileData(); // Carregar dados e imagem do perfil ao iniciar a página
         }
 
         private async void LoadProfileData()
@@ -27,7 +27,7 @@ namespace MindHaven
             int userId = Preferences.Get("UserId", 0);
             if (userId == 0)
             {
-                await DisplayAlert("Error", "User not logged in.", "OK");
+                await DisplayAlert("Erro", "Usuário não está logado.", "OK");
                 return;
             }
 
@@ -40,76 +40,110 @@ namespace MindHaven
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var userData = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonResponse, options);
 
-                if (userData != null)
+                if (userData != null && userData.TryGetValue("status", out var status) && status == "success")
                 {
                     FirstName.Text = userData.ContainsKey("first_name") ? userData["first_name"] : "";
 
-                    if (userData.ContainsKey("profile_picture_base64") && !string.IsNullOrEmpty(userData["profile_picture_base64"]))
+                    if (userData.TryGetValue("profile_picture_base64", out string base64Image) && !string.IsNullOrEmpty(base64Image))
                     {
                         try
                         {
-                            byte[] imageBytes = Convert.FromBase64String(userData["profile_picture_base64"]);
-                            ProfileButton.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
-                            ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
+                            Console.WriteLine($"Base64 Image Length: {base64Image.Length}");
+
+                            byte[] imageBytes = Convert.FromBase64String(base64Image);
+
+                            if (imageBytes != null && imageBytes.Length > 0)
+                            {
+                                Stream imageStream1 = new MemoryStream(imageBytes);
+                                Stream imageStream2 = new MemoryStream(imageBytes);
+
+                                // Use a clone of the stream for each Image control
+                                ProfileButton.Source = ImageSource.FromStream(() => imageStream1);
+                                ProfileImage.Source = ImageSource.FromStream(() => imageStream2);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Decoded image is empty");
+                                SetDefaultProfileImage();
+                            }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            await DisplayAlert("Error", "Failed to load profile image.", "OK");
+                            Console.WriteLine("Image decoding error: " + ex.Message);
+                            await DisplayAlert("Erro", "Falha ao carregar imagem do perfil: " + ex.Message, "OK");
+                            SetDefaultProfileImage();
                         }
                     }
+                    else
+                    {
+                        Console.WriteLine("Base64 image string missing or empty");
+                        SetDefaultProfileImage();
+                    }
+                }
+                else
+                {
+                    string errorMsg = userData != null && userData.ContainsKey("message") ? userData["message"] : "Erro ao carregar dados do usuário.";
+                    await DisplayAlert("Erro", errorMsg, "OK");
+                    SetDefaultProfileImage();
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", "Failed to load profile data: " + ex.Message, "OK");
+                Console.WriteLine("General error: " + ex.Message);
+                await DisplayAlert("Erro", "Falha ao carregar dados do perfil: " + ex.Message, "OK");
+                SetDefaultProfileImage();
             }
         }
+
+
+        private void SetDefaultProfileImage()
+        {
+            ProfileButton.Source = "default_profile.png";
+            ProfileImage.Source = "default_profile.png";
+        }
+
         private async void OnEmergencyModeClicked(object sender, EventArgs e)
         {
             await CloseMenu();
             Application.Current.MainPage = new EmergencyModePage();
         }
+
         private void OnInfoClicked(object sender, EventArgs e)
         {
             LogoutPopupOverlay.IsVisible = false;
             LogoutPopup.IsVisible = false;
 
-            // Reset MainPage properly
             Application.Current.MainPage = new NavigationPage(new UserProfilePage());
-
         }
-       
+
         private async void OnLogoutButtonClicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Logout", "Are you sure you want to log out?", "Yes", "No");
+            bool answer = await DisplayAlert("Logout", "Tem certeza que deseja sair?", "Sim", "Não");
             if (answer)
             {
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
             }
         }
 
-
         private async void OnEmergencyClicked(object sender, EventArgs e)
         {
             await CloseMenu();
             Application.Current.MainPage = new DataUser();
         }
-        
 
         private void OnConfirmLogout(object sender, EventArgs e)
         {
             LogoutPopupOverlay.IsVisible = false;
             LogoutPopup.IsVisible = false;
-
-            // Reset MainPage properly
             Application.Current.MainPage = new NavigationPage(new LoginPage());
         }
 
         private void OnCancelLogout(object sender, EventArgs e)
         {
-            LogoutPopupOverlay.IsVisible = false;  // Hide overlay
-            LogoutPopup.IsVisible = false;  // Hide popup
+            LogoutPopupOverlay.IsVisible = false;
+            LogoutPopup.IsVisible = false;
         }
+
         private async void OnProfileButtonClicked(object sender, EventArgs e)
         {
             if (isProfileOpen)
@@ -118,7 +152,7 @@ namespace MindHaven
             }
             else
             {
-                await CloseMenu(); // Close the menu if open
+                await CloseMenu();
                 ProfilePopup.IsVisible = true;
                 await ProfilePopup.TranslateTo(0, 0, 250, Easing.CubicIn);
                 isProfileOpen = true;
@@ -145,7 +179,7 @@ namespace MindHaven
             }
             else
             {
-                await CloseProfile(); // Close the profile panel if open
+                await CloseProfile();
                 MenuPopup.IsVisible = true;
                 await MenuPopup.TranslateTo(0, 0, 250, Easing.CubicIn);
                 isMenuOpen = true;

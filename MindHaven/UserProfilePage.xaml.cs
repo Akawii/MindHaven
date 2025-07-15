@@ -42,7 +42,7 @@
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var userData = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonResponse, options);
 
-                if (userData != null)
+                if (userData != null && userData.ContainsKey("status") && userData["status"] == "success")
                 {
                     FirstName.Text = userData.ContainsKey("first_name") ? userData["first_name"] : "";
                     LastName.Text = userData.ContainsKey("last_name") ? userData["last_name"] : "";
@@ -55,8 +55,17 @@
                         try
                         {
                             byte[] imageBytes = Convert.FromBase64String(userData["profile_picture_base64"]);
-                            ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
-                            ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes));
+                            string ext = userData.ContainsKey("profile_picture_ext") ? userData["profile_picture_ext"] : "jpg";
+
+                            // Save image bytes to temp file with correct extension
+                            string tempFilePath = Path.Combine(FileSystem.CacheDirectory, $"profile_temp.{ext}");
+                            File.WriteAllBytes(tempFilePath, imageBytes);
+
+                            // Load image from temp file path
+                            ProfileImage.Source = ImageSource.FromFile(tempFilePath);
+
+                            // Save original base64 for future use
+                            originalProfileImageBase64 = userData["profile_picture_base64"];
                         }
                         catch (Exception)
                         {
@@ -64,12 +73,20 @@
                         }
                     }
                 }
+                else
+                {
+                    await DisplayAlert("Error", "Failed to load user data.", "OK");
+                }
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", "Failed to load profile data: " + ex.Message, "OK");
             }
         }
+
+
+
+
 
         private async void OnMenuButtonClicked(object sender, EventArgs e)
         {

@@ -31,18 +31,29 @@
                     Grid.Column="0"/>
 
             <!-- Profile Button (Top Right) -->
-            <ImageButton x:Name="ProfileButton"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         CornerRadius="25"
-                         BackgroundColor="{StaticResource CardBackground}"
-                         VerticalOptions="Start"
-                         HorizontalOptions="End"
-                         Margin="10"
-                         Clicked="OnProfileButtonClicked"
-                         Aspect="AspectFill"
-                         Padding="0"
-                         Grid.Column="2"/>
+            <Frame
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    CornerRadius="25"
+                    Padding="0"
+                    HasShadow="False"
+                    IsClippedToBounds="True"    
+                    BackgroundColor="Transparent"
+                    VerticalOptions="Start"
+                    HorizontalOptions="End"
+                    Margin="10"
+                    Grid.Column="2">
+
+                   <ImageButton
+                        x:Name="ProfileButton"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        BackgroundColor="Transparent"
+                        Aspect="AspectFill"
+                        Clicked="OnProfileButtonClicked"
+                        Padding="0" />
+             </Frame>
+
 
             <!-- Sliding Left Menu -->
             <Frame x:Name="MenuPopup"

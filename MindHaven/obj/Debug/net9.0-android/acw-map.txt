@@ -496,6 +496,9 @@ microsoft.maui.platform.MauiHorizontalScrollView;crc6452ffdc5b34af3a0f.MauiHoriz
 Microsoft.Maui.Platform.MauiSearchView, Microsoft.Maui;crc6452ffdc5b34af3a0f.MauiSearchView
 Microsoft.Maui.Platform.MauiSearchView;crc6452ffdc5b34af3a0f.MauiSearchView
 microsoft.maui.platform.MauiSearchView;crc6452ffdc5b34af3a0f.MauiSearchView
+Microsoft.Maui.Platform.MauiShapeableImageView, Microsoft.Maui;crc6452ffdc5b34af3a0f.MauiShapeableImageView
+Microsoft.Maui.Platform.MauiShapeableImageView;crc6452ffdc5b34af3a0f.MauiShapeableImageView
+microsoft.maui.platform.MauiShapeableImageView;crc6452ffdc5b34af3a0f.MauiShapeableImageView
 Microsoft.Maui.Platform.MauiShapeView, Microsoft.Maui;crc6452ffdc5b34af3a0f.MauiShapeView
 Microsoft.Maui.Platform.MauiShapeView;crc6452ffdc5b34af3a0f.MauiShapeView
 microsoft.maui.platform.MauiShapeView;crc6452ffdc5b34af3a0f.MauiShapeView

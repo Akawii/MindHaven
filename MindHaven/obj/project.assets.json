@@ -31314,7 +31314,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ângela Xavier\\.nuget\\packages\\": {},
+    "C:\\Users\\Angela Xavier\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -31323,7 +31323,7 @@
       "projectUniqueName": "C:\\MindHaven\\MindHaven\\MindHaven.csproj",
       "projectName": "MindHaven",
       "projectPath": "C:\\MindHaven\\MindHaven\\MindHaven.csproj",
-      "packagesPath": "C:\\Users\\Ângela Xavier\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Angela Xavier\\.nuget\\packages\\",
       "outputPath": "C:\\MindHaven\\MindHaven\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
@@ -31331,7 +31331,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ângela Xavier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Angela Xavier\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

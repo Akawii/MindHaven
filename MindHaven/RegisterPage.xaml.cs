@@ -39,7 +39,7 @@ namespace MindHaven
             try
             {
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync("http://172.20.10.2/mindhaven/register.php", content);
+                var response = await client.PostAsync("https://mindhaven.pt/register.php", content);
                 string responseData = await response.Content.ReadAsStringAsync();
 
                 if (!response.IsSuccessStatusCode)
